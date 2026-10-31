@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\dal\\userscoinsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|solutionrelative:userscoinsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|solutionrelative:userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\dal\\walletrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|solutionrelative:walletrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\dal\\coinpricehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|solutionrelative:coinpricehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\dal\\coinrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A70E1762-0FEB-489E-B1E2-4D0793399130}|DAL.csproj|solutionrelative:coinrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersCoinsRepository.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\UsersCoinsRepository.cs",
+              "RelativeDocumentMoniker": "UsersCoinsRepository.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\UsersCoinsRepository.cs",
+              "RelativeToolTip": "UsersCoinsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T12:19:44.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoinRepository.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\CoinRepository.cs",
+              "RelativeDocumentMoniker": "CoinRepository.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\CoinRepository.cs",
+              "RelativeToolTip": "CoinRepository.cs",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAcwFoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T21:31:35.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoinPriceHistoryRepository.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\CoinPriceHistoryRepository.cs",
+              "RelativeDocumentMoniker": "CoinPriceHistoryRepository.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\CoinPriceHistoryRepository.cs",
+              "RelativeToolTip": "CoinPriceHistoryRepository.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwCcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T09:11:14.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WalletRepository.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\WalletRepository.cs",
+              "RelativeDocumentMoniker": "WalletRepository.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\WalletRepository.cs",
+              "RelativeToolTip": "WalletRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T11:27:38.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\UserRepository.cs",
+              "RelativeDocumentMoniker": "UserRepository.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\UserRepository.cs",
+              "RelativeToolTip": "UserRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T14:28:14.14Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

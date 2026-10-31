@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "SW6zZPrQIK0=",
+  "success": true,
+  "projectFilePath": "D:\\vspojekts\\StockExchangeProjekt\\core\\DAL\\DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\mysqlconnector\\2.6.2\\mysqlconnector.2.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}

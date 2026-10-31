@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bll\\coreservisecs\\usercoinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|solutionrelative:coreservisecs\\usercoinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bll\\coreservisecs\\owncoinpurchaseexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|solutionrelative:coreservisecs\\owncoinpurchaseexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bll\\coreservisecs\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|solutionrelative:coreservisecs\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bll\\coreservisecs\\walletservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|solutionrelative:coreservisecs\\walletservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bll\\coreservisecs\\coinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|solutionrelative:coreservisecs\\coinservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bll\\coreservisecs\\coinpricehistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D38BE8-145B-41C7-96E4-343F6999E00A}|BLL.csproj|solutionrelative:coreservisecs\\coinpricehistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OwnCoinPurchaseException.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\OwnCoinPurchaseException.cs",
+              "RelativeDocumentMoniker": "CoreServisecs\\OwnCoinPurchaseException.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\OwnCoinPurchaseException.cs",
+              "RelativeToolTip": "CoreServisecs\\OwnCoinPurchaseException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T22:09:14.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserCoinService.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\UserCoinService.cs",
+              "RelativeDocumentMoniker": "CoreServisecs\\UserCoinService.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\UserCoinService.cs",
+              "RelativeToolTip": "CoreServisecs\\UserCoinService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T22:02:18.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WalletService.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\WalletService.cs",
+              "RelativeDocumentMoniker": "CoreServisecs\\WalletService.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\WalletService.cs",
+              "RelativeToolTip": "CoreServisecs\\WalletService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T22:02:15.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\UserService.cs",
+              "RelativeDocumentMoniker": "CoreServisecs\\UserService.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\UserService.cs",
+              "RelativeToolTip": "CoreServisecs\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T22:02:14.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoinService.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinService.cs",
+              "RelativeDocumentMoniker": "CoreServisecs\\CoinService.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinService.cs",
+              "RelativeToolTip": "CoreServisecs\\CoinService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAIwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T21:33:03.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoinPriceHistoryService.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinPriceHistoryService.cs",
+              "RelativeDocumentMoniker": "CoreServisecs\\CoinPriceHistoryService.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinPriceHistoryService.cs",
+              "RelativeToolTip": "CoreServisecs\\CoinPriceHistoryService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwC4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T09:39:35.431Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+﻿2026-10-28 09:41:44 [WARN] Create coin failed: name 'string' already exists (user 13)
+2026-10-28 09:42:00 [INFO] Coin created: Id=9, Name='Hallo', Value=1, CreatedByUserId=13, AvailableCoinsLeft=0
+2026-10-28 09:42:02 [WARN] Create coin denied: user 13 has no available coins
+2026-10-28 09:42:03 [WARN] Create coin denied: user 13 has no available coins
+2026-10-28 09:44:01 [WARN] Create coin failed: name 'string' already exists (user 14)
+2026-10-28 09:44:07 [INFO] Coin created: Id=10, Name='Hallogids', Value=1, CreatedByUserId=14, AvailableCoinsLeft=0
+2026-10-28 09:44:51 [WARN] Create coin denied: user 14 has no available coins
+2026-10-28 09:45:26 [WARN] Create coin denied: user 14 has no available coins
+2026-10-28 09:45:32 [WARN] Create coin denied: user 13 has no available coins
+2026-10-28 10:49:08 +01:00 [WARN] Create coin denied: user 14 has no available coins
+2026-10-28 10:49:13 +01:00 [WARN] Create coin denied: user 14 has no available coins
+2026-10-28 10:49:40 +01:00 [WARN] Create coin denied: user 3 has no available coins
+2026-10-28 10:49:41 +01:00 [WARN] Create coin denied: user 3 has no available coins
+2026-10-28 10:49:43 +01:00 [INFO] Coin created: Id=11, Name='Halloifsfsdgds', Value=1, CreatedByUserId=5, AvailableCoinsLeft=0
+2026-10-28 10:50:04 +01:00 [WARN] Create coin denied: user 5 has no available coins
+2026-10-28 10:50:09 +01:00 [WARN] Create coin denied: user 5 has no available coins
+2026-10-28 10:50:09 +01:00 [WARN] Create coin denied: user 5 has no available coins
+2026-10-28 10:50:10 +01:00 [WARN] Create coin denied: user 5 has no available coins
+2026-10-28 10:51:10 +01:00 [WARN] Create coin denied: user 2 has no available coins
+2026-10-28 10:51:58 [WARN] Create coin denied: user 14 has no available coins
+2026-10-28 10:59:51 [INFO] Buy succeeded: user 14, coin 4, quantity 1
+2026-10-28 10:59:56 [INFO] GetUserCoins: user 14, 3 entries returned
+2026-10-28 11:01:42 [WARN] Buy failed: user 14, coin 5, quantity 1 (coin/wallet not found or insufficient funds)
+2026-10-28 11:01:50 [WARN] Buy failed: user 14, coin 5, quantity 11 (coin/wallet not found or insufficient funds)
+2026-10-28 11:02:00 [INFO] Buy succeeded: user 14, coin 11, quantity 1
+2026-10-28 11:02:05 [INFO] GetUserCoins: user 14, 4 entries returned
+2026-10-28 11:05:29 [INFO] Login succeeded: username 'oleg'
+2026-10-28 11:05:39 [WARN] Register bad input (username 'oleg'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-10-28 11:05:44 [WARN] Register bad input (username 'oleg'): Der Benutzername mit 'oleg' username ist bereits vergeben.
+2026-10-28 11:06:08 [INFO] User registered: Id=15, username 'berger'
+2026-10-28 11:06:15 [WARN] Login failed: invalid credentials for username 'berger'
+2026-10-28 11:06:21 [INFO] Login succeeded: username 'berger'
+2026-10-28 11:08:35 [INFO] Wallets listed by admin: 6 entries returned
+2026-10-28 11:09:33 [INFO] Buy succeeded: user 14, coin 1, quantity 5
+2026-10-28 11:09:38 [INFO] Wallets listed by admin: 6 entries returned
+2026-10-28 11:09:49 [INFO] Buy succeeded: user 14, coin 1, quantity 5
+2026-10-28 11:09:57 [INFO] Wallets listed by admin: 6 entries returned
+2026-10-28 11:13:10 [INFO] Wallets listed by admin: 6 entries returned2026-10-29 19:47:20 [INFO] User Delete(2) failed: The database service is unavailable.
+2026-10-29 19:47:35 [INFO] User Delete(1) failed: The database service is unavailable.
+2026-10-29 19:48:00 [INFO] User Delete(2) failed: The database service is unavailable.
+2026-10-29 19:51:58 [INFO] User Delete(1): user not found.
+2026-10-29 19:52:03 [INFO] User Delete(2): user deleted successfully.
+2026-10-30 22:45:42 [ERROR] GetAll failed: System.InvalidOperationException: An error occurred while reading data from the database.
+ ---> System.IndexOutOfRangeException: The column name 'userid' does not exist in the result set.
+   at MySqlConnector.Core.ResultSet.GetOrdinal(String name) in /_/src/MySqlConnector/Core/ResultSet.cs:line 354
+   at MySqlConnector.MySqlDataReader.GetOrdinal(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 213
+   at MySqlConnector.MySqlDataReader.GetInt32(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 243
+   at DAL.CoinRepository.CoinReaderMap(MySqlDataReader reader) in D:\vspojekts\StockExchangeProjekt\core\DAL\CoinRepository.cs:line 328
+   at DAL.CoinRepository.SelectAsync() in D:\vspojekts\StockExchangeProjekt\core\DAL\CoinRepository.cs:line 40
+   --- End of inner exception stack trace ---
+   at DAL.CoinRepository.SelectAsync() in D:\vspojekts\StockExchangeProjekt\core\DAL\CoinRepository.cs:line 51
+   at BLL.CoreServisecs.CoinService.GetAsync() in D:\vspojekts\StockExchangeProjekt\core\BLL\CoreServisecs\CoinService.cs:line 17
+   at SEP_WebApplication.Controllers.CoinController.Get() in D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\Controllers\CoinController.cs:line 24
+2026-10-30 22:46:50 [ERROR] GetAll failed: System.InvalidOperationException: An error occurred while reading data from the database.
+ ---> System.IndexOutOfRangeException: The column name 'userid' does not exist in the result set.
+   at MySqlConnector.Core.ResultSet.GetOrdinal(String name) in /_/src/MySqlConnector/Core/ResultSet.cs:line 354
+   at MySqlConnector.MySqlDataReader.GetOrdinal(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 213
+   at MySqlConnector.MySqlDataReader.GetInt32(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 243
+   at DAL.CoinRepository.CoinReaderMap(MySqlDataReader reader) in D:\vspojekts\StockExchangeProjekt\core\DAL\CoinRepository.cs:line 328
+   at DAL.CoinRepository.SelectAsync() in D:\vspojekts\StockExchangeProjekt\core\DAL\CoinRepository.cs:line 40
+   --- End of inner exception stack trace ---
+   at DAL.CoinRepository.SelectAsync() in D:\vspojekts\StockExchangeProjekt\core\DAL\CoinRepository.cs:line 51
+   at BLL.CoreServisecs.CoinService.GetAsync() in D:\vspojekts\StockExchangeProjekt\core\BLL\CoreServisecs\CoinService.cs:line 17
+   at SEP_WebApplication.Controllers.CoinController.Get() in D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\Controllers\CoinController.cs:line 24
+2026-10-30 22:52:03 [INFO] User registered: Id=1, username 'oleg'
+2026-10-30 22:52:17 [INFO] Login succeeded: username 'oleg'
+2026-10-30 22:53:34 [INFO] Wallets listed by admin: 1 entries returned
+2026-10-30 22:55:33 [INFO] Coin created: Id=2, Name='OlegCoin', Value=200, CreatedByUserId=1, AvailableCoinsLeft=0
+2026-10-30 22:58:41 [WARN] Create coin denied: user 1 has no available coins
+2026-10-30 22:59:10 [INFO] Buy succeeded: user 1, coin 1, quantity 1
+2026-10-30 22:59:19 [INFO] Buy succeeded: user 1, coin 2, quantity 1
+2026-10-30 22:59:27 [INFO] GetUserCoins: user 1, 2 entries returned
+2026-10-30 23:00:47 [INFO] GetUserCoins: user 1, 2 entries returned
+2026-10-30 23:14:51 [WARN] Buy denied: user 1 tried to buy own coin 2
+2026-10-30 23:16:27 [INFO] User registered: Id=2, username 'mloeffler'
+2026-10-30 23:16:41 [INFO] Login succeeded: username 'mloeffler'
+2026-10-30 23:16:56 [INFO] Buy succeeded: user 2, coin 2, quantity 1
+2026-10-30 23:17:31 [INFO] Buy succeeded: user 2, coin 2, quantity 5
+2026-10-30 23:17:45 [INFO] Buy succeeded: user 2, coin 2, quantity 10
+2026-10-31 13:23:12 [ERROR] Sell service unavailable (user 2, coin 4): System.InvalidOperationException: The database service is unavailable.
+ ---> MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnectorSemanticConventionsKinds conventionsKinds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1415
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 481
+   at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 768
+   at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 773
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 116
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 150
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 1090
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 563
+   at DAL.UsersCoinsRepository.SellAsync(Int32 userId, Int32 coinId, Decimal quantity) in D:\vspojekts\StockExchangeProjekt\core\DAL\UsersCoinsRepository.cs:line 294
+   --- End of inner exception stack trace ---
+   at DAL.UsersCoinsRepository.SellAsync(Int32 userId, Int32 coinId, Decimal quantity) in D:\vspojekts\StockExchangeProjekt\core\DAL\UsersCoinsRepository.cs:line 397
+   at BLL.CoreServisecs.UserCoinService.SellAsync(Int32 userId, Int32 coinId, Decimal quantity) in D:\vspojekts\StockExchangeProjekt\core\BLL\CoreServisecs\UserCoinService.cs:line 64
+   at SEP_WebApplication.Controllers.CoinController.Sell(Int32 userId, Int32 coinId, Decimal quantity) in D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\Controllers\CoinController.cs:line 215
+2026-10-31 13:23:49 [WARN] Sell failed: user 2, coin 4, quantity 1 (not enough coins, or coin/wallet not found)
+2026-10-31 13:23:56 [INFO] Sell succeeded: user 2, coin 2, quantity 1, revenue 169,30000000
+2026-10-31 13:24:02 [WARN] Sell failed: user 2, coin 1, quantity 1 (not enough coins, or coin/wallet not found)
+2026-10-31 13:24:07 [INFO] Sell succeeded: user 2, coin 2, quantity 1, revenue 168,21000000
+2026-10-31 13:24:10 [WARN] Sell failed: user 2, coin 2, quantity 11111 (not enough coins, or coin/wallet not found)
+2026-10-31 13:24:16 [INFO] Sell succeeded: user 2, coin 2, quantity 4, revenue 661,28000000
+2026-10-31 13:24:18 [INFO] Sell succeeded: user 2, coin 2, quantity 5, revenue 830,15000000
+2026-10-31 13:24:19 [INFO] Sell succeeded: user 2, coin 2, quantity 5, revenue 830,15000000
+2026-10-31 13:24:20 [WARN] Sell failed: user 2, coin 2, quantity 5 (not enough coins, or coin/wallet not found)

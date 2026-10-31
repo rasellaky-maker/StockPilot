@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\pricepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\pricepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\coinpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\coinpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PricePoint.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\PricePoint.cs",
+              "RelativeDocumentMoniker": "Models\\PricePoint.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\PricePoint.cs",
+              "RelativeToolTip": "Models\\PricePoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T10:04:22.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoinPriceHistory.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\CoinPriceHistory.cs",
+              "RelativeDocumentMoniker": "Models\\CoinPriceHistory.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\CoinPriceHistory.cs",
+              "RelativeToolTip": "Models\\CoinPriceHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T09:15:34.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T11:44:45.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Coin.cs",
+              "RelativeDocumentMoniker": "Models\\Coin.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Coin.cs",
+              "RelativeToolTip": "Models\\Coin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T11:53:13.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Wallet.cs",
+              "RelativeDocumentMoniker": "Models\\Wallet.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Wallet.cs",
+              "RelativeToolTip": "Models\\Wallet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T11:46:48.463Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\vspojekts\StockExchangeProjekt\core\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\vspojekts\StockExchangeProjekt\core\DAL\bin\Debug\net8.0\DAL.dll
+D:\vspojekts\StockExchangeProjekt\core\DAL\bin\Debug\net8.0\DAL.pdb
+D:\vspojekts\StockExchangeProjekt\core\DAL\bin\Debug\net8.0\BO.dll
+D:\vspojekts\StockExchangeProjekt\core\DAL\bin\Debug\net8.0\BO.pdb
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.csproj.Up2Date
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.dll
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\DAL.pdb
+D:\vspojekts\StockExchangeProjekt\core\DAL\obj\Debug\net8.0\ref\DAL.dll

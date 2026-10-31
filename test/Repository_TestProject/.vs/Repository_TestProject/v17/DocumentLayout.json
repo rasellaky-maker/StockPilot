@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08505508-7D0B-4EF4-8859-1EA0EA542AF6}|Repository_TestProject.csproj|d:\\vspojekts\\stockexchangeprojekt\\test\\repository_testproject\\unittestuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08505508-7D0B-4EF4-8859-1EA0EA542AF6}|Repository_TestProject.csproj|solutionrelative:unittestuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08505508-7D0B-4EF4-8859-1EA0EA542AF6}|Repository_TestProject.csproj|d:\\vspojekts\\stockexchangeprojekt\\test\\repository_testproject\\unittestcoin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08505508-7D0B-4EF4-8859-1EA0EA542AF6}|Repository_TestProject.csproj|solutionrelative:unittestcoin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08505508-7D0B-4EF4-8859-1EA0EA542AF6}|Repository_TestProject.csproj|d:\\vspojekts\\stockexchangeprojekt\\test\\repository_testproject\\unittestwallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08505508-7D0B-4EF4-8859-1EA0EA542AF6}|Repository_TestProject.csproj|solutionrelative:unittestwallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTestWallet.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\UnitTestWallet.cs",
+              "RelativeDocumentMoniker": "UnitTestWallet.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\UnitTestWallet.cs",
+              "RelativeToolTip": "UnitTestWallet.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwEAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T12:53:00.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTestUser.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\UnitTestUser.cs",
+              "RelativeDocumentMoniker": "UnitTestUser.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\UnitTestUser.cs",
+              "RelativeToolTip": "UnitTestUser.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T19:03:49.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTestCoin.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\UnitTestCoin.cs",
+              "RelativeDocumentMoniker": "UnitTestCoin.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\test\\Repository_TestProject\\UnitTestCoin.cs",
+              "RelativeToolTip": "UnitTestCoin.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T20:10:01.486Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

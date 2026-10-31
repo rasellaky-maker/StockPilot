@@ -1,0 +1,11 @@
+D:\vspojekts\StockExchangeProjekt\core\BO\bin\Debug\net8.0\BO.deps.json
+D:\vspojekts\StockExchangeProjekt\core\BO\bin\Debug\net8.0\BO.dll
+D:\vspojekts\StockExchangeProjekt\core\BO\bin\Debug\net8.0\BO.pdb
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\BO.GeneratedMSBuildEditorConfig.editorconfig
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\BO.AssemblyInfoInputs.cache
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\BO.AssemblyInfo.cs
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\BO.csproj.CoreCompileInputs.cache
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\BO.dll
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\refint\BO.dll
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\BO.pdb
+D:\vspojekts\StockExchangeProjekt\core\BO\obj\Debug\net8.0\ref\BO.dll
