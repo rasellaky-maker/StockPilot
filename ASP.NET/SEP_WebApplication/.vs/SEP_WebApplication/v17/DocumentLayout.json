@@ -3,8 +3,26 @@
   "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|d:\\vspojekts\\stockexchangeprojekt\\asp.net\\sep_webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|d:\\vspojekts\\stockexchangeprojekt\\asp.net\\sep_webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinPriceUpdater .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\Configuration\\ConnectionStringProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|d:\\vspojekts\\stockexchangeprojekt\\asp.net\\sep_webapplication\\attributes\\mainconnnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:attributes\\mainconnnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|d:\\vspojekts\\stockexchangeprojekt\\asp.net\\sep_webapplication\\controllers\\coincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:controllers\\coincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,16 +40,76 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoinPriceUpdater .cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinPriceUpdater .cs",
+              "RelativeDocumentMoniker": "..\\..\\core\\BLL\\CoreServisecs\\CoinPriceUpdater .cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\CoreServisecs\\CoinPriceUpdater .cs",
+              "RelativeToolTip": "..\\..\\core\\BLL\\CoreServisecs\\CoinPriceUpdater .cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwBEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T14:53:57.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConnectionStringProvider.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\Configuration\\ConnectionStringProvider.cs",
+              "RelativeDocumentMoniker": "..\\..\\core\\BLL\\Configuration\\ConnectionStringProvider.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BLL\\Configuration\\ConnectionStringProvider.cs",
+              "RelativeToolTip": "..\\..\\core\\BLL\\Configuration\\ConnectionStringProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T14:51:47.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoinController.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\Controllers\\CoinController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoinController.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\Controllers\\CoinController.cs",
+              "RelativeToolTip": "Controllers\\CoinController.cs",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAcwAQBAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T14:46:32.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainConnnection.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\Attributes\\MainConnnection.cs",
+              "RelativeDocumentMoniker": "Attributes\\MainConnnection.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\Attributes\\MainConnnection.cs",
+              "RelativeToolTip": "Attributes\\MainConnnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T14:44:25.812Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-31T14:42:56.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\ASP.NET\\SEP_WebApplication\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-31T12:25:00.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-31T14:42:30.387Z"
             }
           ]
         }

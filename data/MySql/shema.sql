@@ -60,3 +60,6 @@ ON SCHEDULE EVERY 1 DAY
 DO
   DELETE FROM CoinPriceHistory
   WHERE RecordedAt < UTC_TIMESTAMP() - INTERVAL 1 MONTH;
+
+RENAME TABLE `Coin` TO `coin`, `User` TO `user`, `Wallet` TO `wallet`,
+    `UsersCoins` TO `userscoins`, `CoinPriceHistory` TO `coinpricehistory`;

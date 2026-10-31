@@ -11,43 +11,45 @@ namespace BLL.CoreServisecs
         private readonly ILogger<CoinPriceUpdater> _logger;
         private readonly Random _random = new();
 
-        public CoinPriceUpdater(ILogger<CoinPriceUpdater> logger, string connectionString)
+        public CoinPriceUpdater(
+            ILogger<CoinPriceUpdater> logger,
+            string connectionName)
         {
             _logger = logger;
+            var cs = ConnectionStringProvider.GetConnectionString(connectionName);
 
-            var cs = ConnectionStringProvider.GetConnectionString(connectionString);
             _coinService = new CoinService(cs);
             _historyService = new CoinPriceHistoryService(cs);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            _logger.LogInformation("CoinPriceUpdater started.");
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 try
                 {
-                    await _coinService.RandomizeValuesAsync(3m);
+                    var updated = await _coinService.RandomizeValuesAsync(3m);
+
+                    _logger.LogInformation(
+                        "Updated coins: {Count}", updated);
 
                     var coins = await _coinService.GetAsync();
+
                     var results = await _historyService.RecordSnapshotAsync(coins);
 
-                    var failed = results.Count(r => !r);
-                    if (failed > 0)
-                        _logger.LogWarning("Preishistorie: {Failed} von {Total} Einträgen nicht gespeichert",
-                            failed, results.Count);
-                }
-                catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
-                {
-                    break;
+                    _logger.LogInformation(
+                        "Price history saved: {Count}", results.Count(r => r));
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Fehler beim Aktualisieren der Coin-Werte");
+                    _logger.LogError(ex, "Coin updater failed.");
                 }
 
                 try
                 {
-                    await Task.Delay(TimeSpan.FromMilliseconds(_random.Next(4000, 5001)), stoppingToken);
+                    await Task.Delay(5000, stoppingToken);
                 }
                 catch (OperationCanceledException)
                 {

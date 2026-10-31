@@ -1,4 +1,5 @@
 using Microsoft.OpenApi.Models;
+using SEP_WebApplication.Attributes;
 
 namespace SEP_WebApplication
 {
@@ -13,7 +14,11 @@ namespace SEP_WebApplication
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddHostedService(sp => new BLL.CoreServisecs.CoinPriceUpdater(sp.GetRequiredService<ILogger<BLL.CoreServisecs.CoinPriceUpdater>>(), "LocaleConnection"));
+            builder.Services.AddHostedService(sp =>
+            new BLL.CoreServisecs.CoinPriceUpdater(
+                sp.GetRequiredService<ILogger<BLL.CoreServisecs.CoinPriceUpdater>>(),
+                "GlobaleConnection"
+            ));
             builder.Services.AddSwaggerGen(c =>
             {
                 c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme

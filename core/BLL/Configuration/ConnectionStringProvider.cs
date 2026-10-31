@@ -11,7 +11,7 @@ namespace BLL.Configuration
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        public static string GetConnectionString(string name = "DefaultConnection")
+        public static string GetConnectionString(string name = "LocaleConnection")
         {
             if (_configuration == null)
                 throw new InvalidOperationException("ConnectionStringProvider has not been initialized. Call Initialize() in Program.cs.");
