@@ -28,7 +28,8 @@ namespace DAL
 
                 const string query = @"
                 SELECT id, name, value, numberofbuyers, image, userid
-                FROM coin;
+                FROM coin
+                ORDER BY numberofbuyers DESC;
                 ";
 
                 using var cmd = new MySqlCommand(query, conn);
