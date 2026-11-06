@@ -29,7 +29,7 @@ namespace BO.Models
 
         public string AllInfo()
         {
-            return $"ID: {Id}\nUsername: {Username}\nEmail: {Email}\n Coins to create: {AvailableCoins}";
+            return $"ID: {Id}\nUsername: {Username}\nEmail: {Email}\nCoins to create: {AvailableCoins}";
         }
     }
 }

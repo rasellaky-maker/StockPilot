@@ -15,3 +15,4 @@ D:\vspojekts\StockExchangeProjekt\core\BLL\obj\Debug\net8.0\BLL.dll
 D:\vspojekts\StockExchangeProjekt\core\BLL\obj\Debug\net8.0\refint\BLL.dll
 D:\vspojekts\StockExchangeProjekt\core\BLL\obj\Debug\net8.0\BLL.pdb
 D:\vspojekts\StockExchangeProjekt\core\BLL\obj\Debug\net8.0\ref\BLL.dll
+D:\vspojekts\StockExchangeProjekt\core\BLL\obj\Debug\net8.0\BLL.sourcelink.json

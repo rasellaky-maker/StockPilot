@@ -4,11 +4,116 @@
 // STOCKPILOT — НАСТРОЙКИ
 // ======================================================
 
-const API_BASE = "https://localhost:7132";
+const API_BASE = "https://sep-webapi-4b7c.onrender.com";
 const COINS_LIMIT = 12;
 
 // Как часто тихо обновлять данные (миллисекунды).
 const REFRESH_INTERVAL_MS = 3000;
+
+// Через сколько миллисекунд после последнего введённого символа
+// запускается поиск (чтобы не отправлять запрос на каждую букву).
+const SEARCH_DEBOUNCE_MS = 300;
+
+// ======================================================
+// ЯЗЫК СТРАНИЦЫ (en / de / ru) — берётся из <html lang="...">
+// ======================================================
+
+const I18N = {
+  en: {
+    locale: "en-IE",
+    noPrice: "Price not available",
+    loadFailed: "Could not load data",
+    unnamed: "Unnamed",
+    currentPrice: "Current price",
+    digitalAsset: "DIGITAL ASSET",
+    showChart: "Show price chart",
+    hideChart: "Hide chart",
+    buyers: "Number of buyers",
+    chartPeriod: "Chart period",
+    chartLoading: "Loading chart…",
+    retry: "Retry",
+    chartUnavailable: "Chart is not available for this coin.",
+    chartLoadFailed: "Could not load the chart.",
+    notEnoughData: "Not enough data yet. History builds up automatically — check back a bit later.",
+    min: "Min ",
+    max: "Max ",
+    chartLabel: "Price chart",
+    noResults: "No results",
+    nothingFound: "Nothing found for this query.",
+    noAssets: "No assets available yet. Try refreshing the page.",
+    loadingData: "Loading data…",
+    loading: "Loading…",
+    shown: (shown, total) => `Showing ${shown} of ${total}`,
+    searchResults: count => `Search results: ${count}.`,
+    unavailable: "Data temporarily unavailable",
+    loadFailedLater: "Could not load data. Please try again later.",
+    r1h: "1 h", r24h: "24 h", r7d: "7 d", r30d: "30 d"
+  },
+  de: {
+    locale: "de-AT",
+    noPrice: "Preis nicht angegeben",
+    loadFailed: "Daten konnten nicht geladen werden",
+    unnamed: "Ohne Namen",
+    currentPrice: "Aktueller Preis",
+    digitalAsset: "DIGITALES ASSET",
+    showChart: "Preisdiagramm anzeigen",
+    hideChart: "Diagramm ausblenden",
+    buyers: "Anzahl der Käufer",
+    chartPeriod: "Zeitraum des Diagramms",
+    chartLoading: "Diagramm wird geladen…",
+    retry: "Erneut versuchen",
+    chartUnavailable: "Für diesen Coin ist kein Diagramm verfügbar.",
+    chartLoadFailed: "Diagramm konnte nicht geladen werden.",
+    notEnoughData: "Noch nicht genug Daten. Der Verlauf sammelt sich automatisch – schau etwas später wieder vorbei.",
+    min: "Min ",
+    max: "Max ",
+    chartLabel: "Preisdiagramm",
+    noResults: "Keine Ergebnisse",
+    nothingFound: "Zu dieser Suche wurde nichts gefunden.",
+    noAssets: "Noch keine Assets verfügbar. Versuche, die Seite neu zu laden.",
+    loadingData: "Daten werden geladen…",
+    loading: "Wird geladen…",
+    shown: (shown, total) => `${shown} von ${total} angezeigt`,
+    searchResults: count => `Suchergebnisse: ${count}.`,
+    unavailable: "Daten vorübergehend nicht verfügbar",
+    loadFailedLater: "Daten konnten nicht geladen werden. Bitte versuche es später erneut.",
+    r1h: "1 Std", r24h: "24 Std", r7d: "7 T", r30d: "30 T"
+  },
+  ru: {
+    locale: "ru-RU",
+    noPrice: "Цена не указана",
+    loadFailed: "Не удалось загрузить данные",
+    unnamed: "Без названия",
+    currentPrice: "Текущая цена",
+    digitalAsset: "ЦИФРОВОЙ АКТИВ",
+    showChart: "Показать график цены",
+    hideChart: "Скрыть график",
+    buyers: "Количество покупателей",
+    chartPeriod: "Период графика",
+    chartLoading: "Загружаем график…",
+    retry: "Повторить",
+    chartUnavailable: "График для этой монеты недоступен.",
+    chartLoadFailed: "Не удалось загрузить график.",
+    notEnoughData: "Пока недостаточно данных. История копится автоматически — загляни чуть позже.",
+    min: "Мин ",
+    max: "Макс ",
+    chartLabel: "График цены",
+    noResults: "Нет результатов",
+    nothingFound: "По этому запросу ничего не найдено.",
+    noAssets: "Пока нет доступных активов. Попробуй обновить страницу.",
+    loadingData: "Загружаем данные…",
+    loading: "Загрузка…",
+    shown: (shown, total) => `Показано ${shown} из ${total}`,
+    searchResults: count => `Результаты поиска: ${count}.`,
+    unavailable: "Данные временно недоступны",
+    loadFailedLater: "Не удалось загрузить данные. Попробуй немного позже.",
+    r1h: "1 ч", r24h: "24 ч", r7d: "7 дн", r30d: "30 дн"
+  }
+};
+
+const LANG = (document.documentElement.lang || "en").slice(0, 2).toLowerCase();
+const L = I18N[LANG] || I18N.en;
+const LOCALE = L.locale;
 
 // ======================================================
 // ЭЛЕМЕНТЫ СТРАНИЦЫ
@@ -32,13 +137,13 @@ let isManualLoading = false;
 let lastSignature = null;
 let activeQuery = "";
 
-const euroFormatter = new Intl.NumberFormat("de-AT", {
+const euroFormatter = new Intl.NumberFormat(LOCALE, {
   style: "currency",
   currency: "EUR",
   maximumFractionDigits: 8
 });
 
-const numberFormatter = new Intl.NumberFormat("de-AT", {
+const numberFormatter = new Intl.NumberFormat(LOCALE, {
   maximumFractionDigits: 0
 });
 
@@ -126,13 +231,13 @@ function getField(object, names) {
 
 function formatPrice(value) {
   if (value === null || value === undefined || value === "") {
-    return "Цена не указана";
+    return L.noPrice;
   }
 
   const number = Number(value);
 
   if (!Number.isFinite(number)) {
-    return "Цена не указана";
+    return L.noPrice;
   }
 
   return euroFormatter.format(number);
@@ -172,7 +277,7 @@ async function getJson(path) {
   }
 
   if (!response.ok) {
-    throw new Error("Не удалось загрузить данные");
+    throw new Error(L.loadFailed);
   }
 
   return response.json();
@@ -215,7 +320,7 @@ function normalizeCoins(data) {
 function getCoinName(coin) {
   return safeText(
     getField(coin, ["name", "coinName"]),
-    "Без названия"
+    L.unnamed
   );
 }
 
@@ -481,7 +586,7 @@ function createPriceArea(coin, imagePath, symbol, name) {
 
   const priceLabel = document.createElement("span");
   priceLabel.className = "coin-price-label";
-  priceLabel.textContent = "Текущая цена";
+  priceLabel.textContent = L.currentPrice;
 
   const price = document.createElement("strong");
   price.className = "coin-price";
@@ -508,30 +613,30 @@ function createPriceArea(coin, imagePath, symbol, name) {
 // refreshMs — как часто обновлять открытый график для периода.
 // Длинные периоды обновляем реже: сервер считает их дороже.
 const HISTORY_RANGES = [
-  { key: "1h",  label: "1 ч",   refreshMs: 5000 },
-  { key: "24h", label: "24 ч",  refreshMs: 15000 },
-  { key: "7d",  label: "7 дн",  refreshMs: 60000 },
-  { key: "30d", label: "30 дн", refreshMs: 60000 }
+  { key: "1h",  label: L.r1h,   refreshMs: 5000 },
+  { key: "24h", label: L.r24h,  refreshMs: 15000 },
+  { key: "7d",  label: L.r7d,  refreshMs: 60000 },
+  { key: "30d", label: L.r30d, refreshMs: 60000 }
 ];
 
 const DEFAULT_RANGE = "1h";
 const VIENNA_TZ = "Europe/Vienna";
 
-const timeFormatter = new Intl.DateTimeFormat("de-AT", {
+const timeFormatter = new Intl.DateTimeFormat(LOCALE, {
   hour: "2-digit", minute: "2-digit", timeZone: VIENNA_TZ
 });
 
-const dateFormatter = new Intl.DateTimeFormat("de-AT", {
+const dateFormatter = new Intl.DateTimeFormat(LOCALE, {
   day: "2-digit", month: "2-digit", timeZone: VIENNA_TZ
 });
 
-const fullTimeFormatter = new Intl.DateTimeFormat("de-AT", {
+const fullTimeFormatter = new Intl.DateTimeFormat(LOCALE, {
   day: "2-digit", month: "2-digit",
   hour: "2-digit", minute: "2-digit", second: "2-digit",
   timeZone: VIENNA_TZ
 });
 
-const percentFormatter = new Intl.NumberFormat("de-AT", {
+const percentFormatter = new Intl.NumberFormat(LOCALE, {
   style: "percent",
   signDisplay: "always",
   minimumFractionDigits: 2,
@@ -581,7 +686,7 @@ function createCoinCard(coin, index) {
   summary.tabIndex = 0;
   summary.setAttribute("role", "button");
   summary.setAttribute("aria-expanded", "false");
-  summary.title = "Показать график цены";
+  summary.title = L.showChart;
 
   // Верхняя часть.
   const top = document.createElement("div");
@@ -598,7 +703,7 @@ function createCoinCard(coin, index) {
 
   const symbolLabel = document.createElement("span");
   symbolLabel.className = "coin-symbol";
-  symbolLabel.textContent = symbol || "ЦИФРОВОЙ АКТИВ";
+  symbolLabel.textContent = symbol || L.digitalAsset;
 
   heading.append(title, symbolLabel);
 
@@ -622,7 +727,7 @@ function createCoinCard(coin, index) {
   buyers.className = "coin-buyers";
 
   const buyersLabel = document.createElement("span");
-  buyersLabel.textContent = "Количество покупателей";
+  buyersLabel.textContent = L.buyers;
 
   const buyersValue = document.createElement("strong");
   buyersValue.textContent = formatBuyers(getCoinBuyers(coin));
@@ -680,7 +785,7 @@ function updateCoinCard(view, coin, index) {
   const imagePath = getCoinImage(coin);
 
   view.title.textContent = name;
-  view.symbolLabel.textContent = symbol || "ЦИФРОВОЙ АКТИВ";
+  view.symbolLabel.textContent = symbol || L.digitalAsset;
   view.tag.textContent = `#${index + 1}`;
   view.buyersValue.textContent = formatBuyers(getCoinBuyers(coin));
 
@@ -724,7 +829,7 @@ function setExpanded(key, expanded) {
 
   view.card.classList.toggle("is-expanded", expanded);
   view.summary.setAttribute("aria-expanded", String(expanded));
-  view.summary.title = expanded ? "Скрыть график" : "Показать график цены";
+  view.summary.title = expanded ? L.hideChart : L.showChart;
 
   if (!expanded) return;
 
@@ -803,7 +908,7 @@ function createHistoryPanel(view) {
   const tabs = document.createElement("div");
   tabs.className = "history-tabs";
   tabs.setAttribute("role", "tablist");
-  tabs.setAttribute("aria-label", "Период графика");
+  tabs.setAttribute("aria-label", L.chartPeriod);
 
   const tabButtons = HISTORY_RANGES.map(range => {
     const button = document.createElement("button");
@@ -903,7 +1008,7 @@ function setRange(key) {
   panel.loadedAt = 0;
 
   clearPlot(panel);
-  showMessage(panel, "Загружаем график…");
+  showMessage(panel, L.chartLoading);
   loadHistory(panel);
 }
 
@@ -920,9 +1025,9 @@ function showMessage(panel, text, withRetry = false) {
 
     retry.type = "button";
     retry.className = "history-retry";
-    retry.textContent = "Повторить";
+    retry.textContent = L.retry;
     retry.addEventListener("click", () => {
-      showMessage(panel, "Загружаем график…");
+      showMessage(panel, L.chartLoading);
       loadHistory(panel);
     });
 
@@ -989,7 +1094,7 @@ async function loadHistory(panel, { silent = false } = {}) {
   const coinId = panel.view.coinId;
 
   if (coinId === undefined) {
-    showMessage(panel, "График для этой монеты недоступен.");
+    showMessage(panel, L.chartUnavailable);
     return;
   }
 
@@ -1002,7 +1107,7 @@ async function loadHistory(panel, { silent = false } = {}) {
   panel.loading = true;
 
   if (!silent && panel.points.length === 0) {
-    showMessage(panel, "Загружаем график…");
+    showMessage(panel, L.chartLoading);
   }
 
   try {
@@ -1024,7 +1129,7 @@ async function loadHistory(panel, { silent = false } = {}) {
     if (silent && panel.points.length > 0) return;
 
     clearPlot(panel);
-    showMessage(panel, "Не удалось загрузить график.", true);
+    showMessage(panel, L.chartLoadFailed, true);
   } finally {
     if (token === panel.requestToken) {
       panel.loading = false;
@@ -1057,7 +1162,7 @@ function renderPanel(panel) {
     clearPlot(panel);
     showMessage(
       panel,
-      "Пока недостаточно данных. История копится автоматически — загляни чуть позже."
+      L.notEnoughData
     );
     return;
   }
@@ -1090,9 +1195,9 @@ function updateStats(panel) {
   maxStrong.textContent = formatPrice(max);
 
   panel.minmaxEl.replaceChildren(
-    document.createTextNode("Мин "),
+    document.createTextNode(L.min),
     minStrong,
-    document.createTextNode("  ·  Макс "),
+    document.createTextNode("  ·  " + L.max),
     maxStrong
   );
 }
@@ -1105,7 +1210,7 @@ function formatAxisPrice(value, span) {
   else if (span < 1) digits = 4;
   else if (span < 100) digits = 2;
 
-  return new Intl.NumberFormat("de-AT", {
+  return new Intl.NumberFormat(LOCALE, {
     minimumFractionDigits: digits,
     maximumFractionDigits: digits
   }).format(value);
@@ -1193,7 +1298,7 @@ function drawChart(panel) {
   const gradId = `history-grad-${panel.uid}`;
 
   panel.plotEl.innerHTML =
-    `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="График цены">` +
+    `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${L.chartLabel}">` +
     `<defs><linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">` +
     `<stop offset="0" style="stop-color:var(--trend);stop-opacity:.28"/>` +
     `<stop offset="1" style="stop-color:var(--trend);stop-opacity:0"/>` +
@@ -1371,12 +1476,12 @@ function showSkeletons() {
 function showEmptyState(query) {
   clearCards();
 
-  setCoinCount("Нет результатов");
+  setCoinCount(L.noResults);
 
   setStatus(
     query
-      ? "По этому запросу ничего не найдено."
-      : "Пока нет доступных активов. Попробуй обновить страницу."
+      ? L.nothingFound
+      : L.noAssets
   );
 }
 
@@ -1405,8 +1510,8 @@ async function run({ silent = false } = {}) {
     setLoading(true);
     showSkeletons();
 
-    setStatus("Загружаем данные…");
-    setCoinCount("Загрузка…");
+    setStatus(L.loadingData);
+    setCoinCount(L.loading);
 
     if (clearSearchButton) {
       clearSearchButton.hidden = query.length === 0;
@@ -1470,12 +1575,12 @@ async function run({ silent = false } = {}) {
     renderCoins(coins);
 
     setCoinCount(
-      `Показано ${coins.length} из ${validCoins.length}`
+      L.shown(coins.length, validCoins.length)
     );
 
     setStatus(
       query
-        ? `Результаты поиска: ${coins.length}.`
+        ? L.searchResults(coins.length)
         : ""
     );
   } catch {
@@ -1492,10 +1597,10 @@ async function run({ silent = false } = {}) {
     lastSignature = null;
     clearCards();
 
-    setCoinCount("Данные временно недоступны");
+    setCoinCount(L.unavailable);
 
     setStatus(
-      "Не удалось загрузить данные. Попробуй немного позже.",
+      L.loadFailedLater,
       true
     );
   } finally {
@@ -1542,6 +1647,7 @@ document.addEventListener("visibilitychange", () => {
 if (searchForm) {
   searchForm.addEventListener("submit", event => {
     event.preventDefault();
+    cancelPendingSearch();
     run();
     scheduleRefresh();
   });
@@ -1556,18 +1662,59 @@ if (clearSearchButton) {
     }
 
     clearSearchButton.hidden = true;
+    cancelPendingSearch();
     run();
     scheduleRefresh();
   });
 }
 
-// Кнопка очистки видна только при введённом тексте.
+// Поиск при вводе: запускается через небольшую паузу после
+// последнего символа. Кнопка «Найти» и Enter по-прежнему работают
+// и запускают поиск сразу.
+let searchTimer = null;
+let isComposing = false;
+
+function cancelPendingSearch() {
+  clearTimeout(searchTimer);
+  searchTimer = null;
+}
+
+function runLiveSearch() {
+  searchTimer = null;
+
+  if (!searchInput) return;
+
+  // Запрос не изменился — повторно не ищем.
+  if (searchInput.value.trim() === activeQuery) return;
+
+  run();
+  scheduleRefresh();
+}
+
 if (searchInput) {
+  // Не мешаем вводу через IME (китайский, японский и т.п.):
+  // ждём, пока пользователь закончит составлять символ.
+  searchInput.addEventListener("compositionstart", () => {
+    isComposing = true;
+  });
+
+  searchInput.addEventListener("compositionend", () => {
+    isComposing = false;
+    cancelPendingSearch();
+    searchTimer = setTimeout(runLiveSearch, SEARCH_DEBOUNCE_MS);
+  });
+
   searchInput.addEventListener("input", () => {
+    // Кнопка очистки видна только при введённом тексте.
     if (clearSearchButton) {
       clearSearchButton.hidden =
         searchInput.value.trim().length === 0;
     }
+
+    if (isComposing) return;
+
+    cancelPendingSearch();
+    searchTimer = setTimeout(runLiveSearch, SEARCH_DEBOUNCE_MS);
   });
 }
 

@@ -18,5 +18,9 @@
             Quantity = quantity;
             AcquisitionDate = acquisitionDate;
         }
+        public override string ToString()
+        {
+            return Coin.ToString();
+        }
     }
 }

@@ -1,1 +1,40 @@
-﻿
+﻿2026-11-05 18:51:33 [WARN] Register bad input (username 'oleg'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-11-05 18:52:42 [WARN] Register bad input (username 'oleg'): Das Passwort muss mindestens 6 Zeichen lang sein.
+2026-11-05 18:55:18 [WARN] Register bad input (username 'oleg'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-11-05 18:55:57 [WARN] Register bad input (username 'oleg'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-11-05 18:56:23 [WARN] Register bad input (username 'oleg'): Der Benutzername mit 'oleg' username ist bereits vergeben.
+2026-11-05 18:56:58 [INFO] User registered: Id=3, username 'kaan ovali'
+2026-11-05 18:59:01 [WARN] Register bad input (username 'oleg'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-11-05 19:00:16 [WARN] Register bad input (username 'oleg'): Das Passwort muss mindestens 6 Zeichen lang sein.
+2026-11-05 19:02:19 [WARN] Register bad input (username 'oleg'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-11-05 19:03:04 [WARN] Register bad input (username 'oleg'): Der Benutzername mit 'oleg' username ist bereits vergeben.
+2026-11-05 19:36:13 [INFO] GetUserCoins: user 1, 2 entries returned
+2026-11-05 19:36:46 [INFO] Wallets listed by admin: 3 entries returned
+2026-11-05 19:37:39 [INFO] Coin created: Id=3, Name='string', Value=11111110, CreatedByUserId=3, AvailableCoinsLeft=0
+2026-11-05 19:42:28 [WARN] Create coin failed: name 'string' already exists (user 2)
+2026-11-05 19:42:36 [WARN] Create coin bad input (user 2): Value must be greater than 0. (Parameter 'value')
+2026-11-05 19:42:55 [INFO] Coin created: Id=4, Name='2CoinsUser', Value=9850438, CreatedByUserId=2, AvailableCoinsLeft=0
+2026-11-05 19:51:29 [WARN] Register bad input (username 'mloeffler'): Der Benutzername mit 'mloeffler' username ist bereits vergeben.
+2026-11-05 19:53:12 [WARN] Create coin failed: user 4 not found
+2026-11-05 19:53:26 [WARN] Create coin denied: user 3 has no available coins
+2026-11-05 19:53:57 [INFO] Wallets listed by admin: 3 entries returned
+2026-11-05 19:54:23 [INFO] Wallets listed by admin: 3 entries returned
+2026-11-05 19:54:56 [INFO] User registered: Id=4, username 'tina'
+2026-11-05 19:55:02 [INFO] Wallets listed by admin: 4 entries returned
+2026-11-05 19:56:24 [INFO] Wallets listed by admin: 4 entries returned
+2026-11-05 19:59:15 [WARN] Create coin bad input (user 4): Specified argument was out of the range of valid values. (Parameter 'Coin price cannot exceed 20.000.')
+2026-11-05 19:59:26 [INFO] Coin created: Id=5, Name='ацупцп', Value=20000, CreatedByUserId=4, AvailableCoinsLeft=0
+2026-11-06 14:46:36 [INFO] User registered: Id=5, username 'kropfberger'
+2026-11-06 15:11:15 [INFO] Login succeeded: username 'oleg'
+2026-11-06 15:11:40 [INFO] Login succeeded: username 'mloeffler'
+2026-11-06 15:11:56 [INFO] Login succeeded: username 'kropfberger'
+2026-11-06 15:12:32 [INFO] Login succeeded: username 'oleg'
+2026-11-06 15:14:20 [INFO] Login succeeded: username 'oleg'
+2026-11-06 15:19:44 [INFO] Login succeeded: username 'oleg'
+2026-11-06 15:27:50 [INFO] Login succeeded: username 'oleg'
+2026-11-06 15:28:27 [INFO] Wallets listed by admin: 5 entries returned
+2026-11-06 15:31:22 [INFO] Login succeeded: username 'oleg'
+2026-11-06 15:33:45 [INFO] GetUserCoins: user 1, 2 entries returned
+2026-11-06 16:23:07 [INFO] Login succeeded: username 'oleg'
+2026-11-06 16:25:10 [INFO] Login succeeded: username 'oleg'
+2026-11-06 16:26:58 [INFO] Login succeeded: username 'oleg'

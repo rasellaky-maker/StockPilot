@@ -1,17 +1,21 @@
-﻿using BO.Models;
+﻿
+using BO.Models;
 using MySqlConnector;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DAL
 {
     public class CoinPriceHistoryRepository
     {
-        private string _connectionString = string.Empty;
+        private readonly string _connectionString;
+
         public CoinPriceHistoryRepository(string connectionString)
         {
             _connectionString = connectionString;
         }
-        public async Task<List<PricePoint>> GetHistoryAggregatedAsync(int coinId, DateTime fromUtc, int bucketSeconds)
+        public async Task<List<PricePoint>> GetHistoryAggregatedAsync(
+            int coinId,
+            DateTime fromUtc,
+            int bucketSeconds)
         {
             var result = new List<PricePoint>();
 
@@ -21,28 +25,47 @@ namespace DAL
                 await conn.OpenAsync();
 
                 const string query = @"
-            SELECT
-                DATE_ADD('1970-01-01',
-                    INTERVAL FLOOR(TIMESTAMPDIFF(SECOND, '1970-01-01', RecordedAt) / @bucket) * @bucket SECOND) AS bucket_time,
-                AVG(Price) AS avg_price
-            FROM CoinPriceHistory
-            WHERE CoinId = @coinId
-              AND RecordedAt >= @from
-            GROUP BY bucket_time
-            ORDER BY bucket_time;";
+                    SELECT
+                        DATE_ADD(
+                            '1970-01-01',
+                            INTERVAL (
+                                FLOOR(
+                                    TIMESTAMPDIFF(
+                                        SECOND,
+                                        '1970-01-01',
+                                        recordedat
+                                    ) / @bucket
+                                ) * @bucket
+                            ) SECOND
+                        ) AS bucket_time,
+                        AVG(price) AS avg_price
+                    FROM coinpricehistory
+                    WHERE coinid = @coinid
+                      AND recordedat >= @from
+                    GROUP BY bucket_time
+                    ORDER BY bucket_time ASC;";
 
                 await using var cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.Add("@coinId", MySqlDbType.Int32).Value = coinId;
+
+                cmd.Parameters.Add("@coinid", MySqlDbType.Int32).Value = coinId;
                 cmd.Parameters.Add("@from", MySqlDbType.DateTime).Value = fromUtc;
                 cmd.Parameters.Add("@bucket", MySqlDbType.Int32).Value = bucketSeconds;
 
                 await using var reader = await cmd.ExecuteReaderAsync();
+
                 while (await reader.ReadAsync())
                 {
+                    if (reader.IsDBNull(0) || reader.IsDBNull(1))
+                        continue;
+
                     result.Add(new PricePoint
                     {
-                        Time = DateTime.SpecifyKind(reader.GetDateTime("bucket_time"), DateTimeKind.Utc),
-                        Price = reader.GetDecimal("avg_price")
+                        Time = DateTime.SpecifyKind(
+                            reader.GetDateTime(0),
+                            DateTimeKind.Utc
+                        ),
+
+                        Price = reader.GetDecimal(1)
                     });
                 }
 
@@ -51,12 +74,16 @@ namespace DAL
             catch (MySqlException ex)
             {
                 throw new InvalidOperationException(
-                    $"Datenbankfehler beim Laden der Preishistorie (CoinId {coinId}).", ex);
+                    $"Database error loading history for coin {coinId}.",
+                    ex
+                );
             }
         }
-        public async Task<List<bool>> InsertManyAsync(IEnumerable<CoinPriceHistory> items)
+        public async Task<List<bool>> InsertManyAsync(
+            IEnumerable<CoinPriceHistory> items)
         {
             ArgumentNullException.ThrowIfNull(items);
+
             var results = new List<bool>();
 
             try
@@ -65,34 +92,43 @@ namespace DAL
                 await conn.OpenAsync();
 
                 const string query = @"
-                    INSERT INTO coinpricehistory (coinid, price, recordedat)
-                    VALUES (@coinid, @price, @recordedat);
-                ";
+                    INSERT INTO coinpricehistory
+                        (coinid, price, recordedat)
+                    VALUES
+                        (@coinid, @price, @recordedat);";
 
                 await using var cmd = new MySqlCommand(query, conn);
+
                 var pCoin = cmd.Parameters.Add("@coinid", MySqlDbType.Int32);
                 var pPrice = cmd.Parameters.Add("@price", MySqlDbType.Decimal);
                 var pTime = cmd.Parameters.Add("@recordedat", MySqlDbType.DateTime);
 
-                foreach (var cph in items)
+                foreach (var item in items)
                 {
-                    if (cph?.Coin == null)
+                    if (item?.Coin == null ||
+                        item.Coin.Id <= 0 ||
+                        item.Price <= 0)
                     {
                         results.Add(false);
                         continue;
                     }
 
-                    pCoin.Value = cph.Coin.Id;
-                    pPrice.Value = cph.Price;
-                    pTime.Value = cph.RecordedAt == default ? DateTime.UtcNow : cph.RecordedAt;
+                    pCoin.Value = item.Coin.Id;
+                    pPrice.Value = item.Price;
+
+                    pTime.Value = item.RecordedAt == default
+                        ? DateTime.UtcNow
+                        : item.RecordedAt.ToUniversalTime();
 
                     try
                     {
-                        results.Add(await cmd.ExecuteNonQueryAsync() == 1);
+                        results.Add(
+                            await cmd.ExecuteNonQueryAsync() == 1
+                        );
                     }
-                    catch (MySqlException)
+                    catch (MySqlException ex)
                     {
-                        results.Add(false);
+                        throw new InvalidOperationException("Invalid operation", ex);
                     }
                 }
 
@@ -100,7 +136,10 @@ namespace DAL
             }
             catch (MySqlException ex)
             {
-                throw new InvalidOperationException("Datenbankfehler beim Speichern der Preishistorie.", ex);
+                throw new InvalidOperationException(
+                    "Database error saving price history.",
+                    ex
+                );
             }
         }
     }

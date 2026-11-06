@@ -1,0 +1,16 @@
+D:\vspojekts\StockExchangeProjekt\core\view\bin\Debug\net8.0\view.deps.json
+D:\vspojekts\StockExchangeProjekt\core\view\bin\Debug\net8.0\view.dll
+D:\vspojekts\StockExchangeProjekt\core\view\bin\Debug\net8.0\view.pdb
+D:\vspojekts\StockExchangeProjekt\core\view\bin\Debug\net8.0\BO.dll
+D:\vspojekts\StockExchangeProjekt\core\view\bin\Debug\net8.0\BO.pdb
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.csproj.AssemblyReference.cache
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.GeneratedMSBuildEditorConfig.editorconfig
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.AssemblyInfoInputs.cache
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.AssemblyInfo.cs
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.csproj.CoreCompileInputs.cache
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.sourcelink.json
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.csproj.Up2Date
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.dll
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\refint\view.dll
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\view.pdb
+D:\vspojekts\StockExchangeProjekt\core\view\obj\Debug\net8.0\ref\view.dll

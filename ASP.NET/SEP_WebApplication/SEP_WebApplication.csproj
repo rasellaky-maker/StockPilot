@@ -14,10 +14,13 @@
 
   <ItemGroup>
     <Reference Include="BLL">
-      <HintPath>..\..\core\BLL\bin\Debug\net8.0\BLL.dll</HintPath>
+      <HintPath>Attributes\BLL.dll</HintPath>
     </Reference>
     <Reference Include="BO">
-      <HintPath>..\..\core\BLL\bin\Debug\net8.0\BO.dll</HintPath>
+      <HintPath>Attributes\BO.dll</HintPath>
+    </Reference>
+    <Reference Include="DAL">
+      <HintPath>Attributes\DAL.dll</HintPath>
     </Reference>
   </ItemGroup>
 

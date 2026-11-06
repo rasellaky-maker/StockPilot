@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\userscoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\userscoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\coinpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\coinpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\bo\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UsersCoins.cs",
+              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\UsersCoins.cs",
+              "RelativeDocumentMoniker": "Models\\UsersCoins.cs",
+              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\UsersCoins.cs",
+              "RelativeToolTip": "Models\\UsersCoins.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T15:26:03.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PricePoint.cs",
               "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\PricePoint.cs",
               "RelativeDocumentMoniker": "Models\\PricePoint.cs",
@@ -50,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CoinPriceHistory.cs",
               "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\CoinPriceHistory.cs",
               "RelativeDocumentMoniker": "Models\\CoinPriceHistory.cs",
@@ -62,41 +79,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswB8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T11:44:45.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T11:44:45.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Coin.cs",
               "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Coin.cs",
               "RelativeDocumentMoniker": "Models\\Coin.cs",
               "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Coin.cs",
               "RelativeToolTip": "Models\\Coin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-04T11:53:13.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Wallet.cs",
               "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Wallet.cs",
               "RelativeDocumentMoniker": "Models\\Wallet.cs",
               "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\BO\\Models\\Wallet.cs",
               "RelativeToolTip": "Models\\Wallet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T11:46:48.463Z"
+              "WhenOpened": "2026-10-04T11:46:48.463Z",
+              "EditorCaption": ""
             }
           ]
         }

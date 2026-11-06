@@ -19,7 +19,7 @@ namespace SEP_WebApplication.Controllers
 
         [HttpPost("register")]
         [ApiKey]
-        public async Task<ActionResult<User>> Register(string username, string password, string email)
+        public async Task<ActionResult<User>> Register([FromForm] string username, [FromForm] string password, [FromForm] string email)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace SEP_WebApplication.Controllers
 
         [HttpPost("login")]
         [ApiKey]
-        public async Task<ActionResult<User>> Login(string username, string password)
+        public async Task<ActionResult<User>> Login([FromForm] string username, [FromForm] string password)
         {
             try
             {

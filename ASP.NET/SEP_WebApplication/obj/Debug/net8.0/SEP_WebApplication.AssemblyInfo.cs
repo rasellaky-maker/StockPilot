@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SEP_WebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbba35ad2c3e2def70e4008c105806703736c914")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41935e83095cefc6b87fc7d44e6ec4dd40f3fe6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SEP_WebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SEP_WebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

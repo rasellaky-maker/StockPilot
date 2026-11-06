@@ -53,3 +53,38 @@
 .coin-price.flash-up{animation:price-up 1.2s ease-out}
 .coin-price.flash-down{animation:price-down 1.2s ease-out}
 @media(max-width:640px){.history-chart{height:210px}.history-tabs{width:100%}.history-tab{flex:1;min-width:0}.history-change{font-size:18px}}
+
+/* ===== Переключатель языка ===== */
+.header-actions{display:flex;align-items:center;gap:12px}
+.lang-switch{display:flex;gap:2px;padding:3px;border:1px solid var(--border);border-radius:11px;background:#0c1118}
+.lang-switch a{min-width:34px;padding:6px 9px;border-radius:8px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.5px;text-align:center;transition:color .2s,background .2s}
+.lang-switch a:hover{color:var(--text)}
+.lang-switch a[aria-current="true"]{color:#11170a;background:var(--green)}
+@media(max-width:640px){.header-actions{gap:8px}.lang-switch a{min-width:30px;padding:6px 7px;font-size:10px}}
+@media(max-width:560px){.header-button{display:none}}
+
+/* ===== Загрузочный экран ===== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.page-loader{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;background:radial-gradient(ellipse at 50% 42%,rgba(48,79,51,.24),transparent 55%),var(--bg);transition:opacity .45s ease,visibility 0s linear .45s}
+.page-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-mark{position:relative;width:150px;height:150px;display:grid;place-items:center}
+.loader-logo{width:76px;height:76px;display:grid;place-items:center;border:1px solid rgba(182,250,100,.5);border-radius:23px;color:var(--green);background:linear-gradient(145deg,#202e20,#101710);box-shadow:0 0 50px rgba(182,250,100,.14);font-family:"Manrope",sans-serif;font-size:44px;font-weight:800;animation:loader-pulse 1.8s ease-in-out infinite}
+.loader-orbit{position:absolute;inset:0;border:1px solid rgba(182,250,100,.16);border-radius:50%;animation:loader-spin 2.8s linear infinite}
+.loader-orbit::after{content:"";position:absolute;top:-4px;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--green);box-shadow:0 0 12px rgba(182,250,100,.6)}
+.loader-orbit-two{inset:18px;border-color:rgba(255,255,255,.08);animation-duration:4.2s;animation-direction:reverse}
+.loader-orbit-two::after{top:-3px;width:5px;height:5px;margin-left:-2.5px;background:#8c98a9;box-shadow:none}
+.loader-word{font-family:"Manrope",sans-serif;font-size:22px;font-weight:800;letter-spacing:-.8px}
+.loader-bar{position:relative;width:140px;height:2px;overflow:hidden;border-radius:2px;background:#1a222d}
+.loader-bar::after{content:"";position:absolute;inset:0 auto 0 0;width:45%;border-radius:2px;background:var(--green);animation:loader-slide 1.2s ease-in-out infinite}
+@keyframes loader-spin{to{transform:rotate(360deg)}}
+@keyframes loader-pulse{50%{transform:scale(.94);box-shadow:0 0 70px rgba(182,250,100,.26)}}
+@keyframes loader-slide{from{transform:translateX(-100%)}to{transform:translateX(320%)}}
+
+/* ===== Ссылка на скачивание и страница клиента ===== */
+.header-download{border-color:rgba(182,250,100,.35)}
+.header-download:hover{background:rgba(182,250,100,.06)}
+.start-actions{display:flex;flex-wrap:wrap;gap:12px}
+.footer-links{display:flex;align-items:center;gap:22px}
+.download-section{padding-top:90px;padding-bottom:110px}
+.download-title{max-width:490px;margin:0;font-family:"Manrope",sans-serif;font-size:clamp(31px,4vw,44px);font-weight:800;line-height:1.2;letter-spacing:-1.8px}
+@media(max-width:640px){.download-section{padding-top:40px;padding-bottom:70px}.download-title{font-size:34px}.footer-links{gap:16px}}

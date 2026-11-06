@@ -12,10 +12,6 @@ D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\Sw
 D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\BLL.dll
 D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\BO.dll
-D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\DAL.dll
-D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\BLL.pdb
-D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\BO.pdb
-D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\DAL.pdb
 D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\SEP_WebApplication.csproj.AssemblyReference.cache
 D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\rpswa.dswa.cache.json
 D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\SEP_WebApplication.GeneratedMSBuildEditorConfig.editorconfig
@@ -88,3 +84,5 @@ D:\vspojekts\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\refint\SEP_WebApplicati
 D:\vspojekts\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\SEP_WebApplication.pdb
 D:\vspojekts\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\SEP_WebApplication.genruntimeconfig.cache
 D:\vspojekts\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\ref\SEP_WebApplication.dll
+D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\obj\Debug\net8.0\SEP_WebApplication.sourcelink.json
+D:\vspojekts\StockExchangeProjekt\ASP.NET\SEP_WebApplication\bin\Debug\net8.0\DAL.dll

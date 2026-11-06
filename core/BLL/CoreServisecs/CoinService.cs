@@ -49,6 +49,8 @@ namespace BLL.CoreServisecs
                 throw new ArgumentException("Value must be greater than 0.", nameof(value));
             if (userId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(userId));
+            if (amount > 20000)
+                throw new ArgumentOutOfRangeException("Coin price cannot exceed 20.000.");
 
             var result = await _repo.InsertAsync(new Coin(0, name, amount, 0, image, userId));
             return result;
