@@ -3,27 +3,22 @@ using System.Globalization;
 using System.Net;
 using System.Net.Http.Json;
 using System.Text;
+using System.Text.Json;
 
 namespace VIEW
 {
     public class ConsoleView
     {
-        public User localUser = new User();
-
-        private const string baseUrl = "https://localhost:7132/";
-
-        public CultureInfo culture = new CultureInfo("de-DE");
-
-        private static readonly HttpClient client = new HttpClient
+        private HttpClient client = new HttpClient();
+        public ConsoleView(string baseUrl)
         {
-            BaseAddress = new Uri(baseUrl),
-            Timeout = TimeSpan.FromSeconds(10)
-        };
-
-        public ConsoleView()
-        {
+            client.BaseAddress = new Uri(baseUrl);
+            client.Timeout = TimeSpan.FromSeconds(10);
             client.DefaultRequestHeaders.Add("X-Api-Key", "348thGFubg7345uff84BIBJJG%fjdgndjgu");
         }
+
+        public User localUser = new User();
+        public CultureInfo culture = new CultureInfo("de-DE");
 
         public string ShowMenu()
         {
@@ -37,6 +32,7 @@ namespace VIEW
             sb.AppendLine();
             sb.AppendLine("-mycoin");
             sb.AppendLine("-mywallet");
+            sb.AppendLine("-createcoin");
             sb.AppendLine("-buy");
             sb.AppendLine("-sale");
             sb.AppendLine("-track");
@@ -168,7 +164,6 @@ namespace VIEW
             if (status == HttpStatusCode.Created && singinUser != null)
             {
                 localUser = singinUser;
-
                 return "Registration successful!\nWelcome aboard!";
             }
 
@@ -216,7 +211,7 @@ namespace VIEW
         public async Task<string> GetWallet()
         {
             if (localUser.Id == 0)
-                return "❌ You are not logged in.";
+                return "You are not logged in.";
 
             var result = await HttpGetWallet(localUser.Id);
 
@@ -253,7 +248,26 @@ namespace VIEW
                 return sb.ToString();
             }
 
-            return $"❌ {result.Error}\nStatus: {result.Status} ({(int)result.Status})";
+            return $"{result.Error}\nStatus: {result.Status} ({(int)result.Status})";
+        }
+
+        public async Task<string> CreateCoin()
+        {
+            Console.WriteLine("----- Create Coin -----");
+            string coinNameInput, coinValueInput;
+            do
+            {
+                Console.Write("Coin Name: ");
+                coinNameInput = Console.ReadLine();
+            } while (string.IsNullOrEmpty(coinNameInput));
+
+            do
+            {
+                Console.Write("Coin Value: ");
+                coinValueInput = Console.ReadLine();
+            } while (string.IsNullOrEmpty(coinValueInput) && );
+
+           
         }
 
         //----Http
@@ -357,29 +371,36 @@ namespace VIEW
                 string result = await response.Content.ReadAsStringAsync();
 
                 if (response.IsSuccessStatusCode)
-                    return (response.StatusCode, user, null);
+                {
+                    var createdUser = JsonSerializer.Deserialize<User>(
+                        result,
+                        new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        }
+                    );
+
+                    if (createdUser == null)
+                    {
+                        return (response.StatusCode, null, "User response is empty.");
+                    }
+
+                    return (response.StatusCode, createdUser, null);
+                }
 
                 return (
                     response.StatusCode,
                     null,
-                    "Registration failed. Please check your information and try again."
+                    result
                 );
             }
             catch (HttpRequestException)
             {
-                return (
-                    HttpStatusCode.ServiceUnavailable,
-                    null,
-                    ConnectionError()
-                );
+                return (HttpStatusCode.ServiceUnavailable, null, ConnectionError());
             }
             catch (TaskCanceledException)
             {
-                return (
-                    HttpStatusCode.RequestTimeout,
-                    null,
-                    TimeoutError()
-                );
+                return (HttpStatusCode.RequestTimeout, null, TimeoutError());
             }
         }
         private async Task<(HttpStatusCode Status, List<Coin>? Coins, string? Error)> HttpGetAll()

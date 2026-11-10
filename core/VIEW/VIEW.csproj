@@ -10,6 +10,9 @@
     <Reference Include="BO">
       <HintPath>..\BO\bin\Debug\net8.0\BO.dll</HintPath>
     </Reference>
+    <Reference Include="view">
+      <HintPath>bin\Debug\net8.0\view.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

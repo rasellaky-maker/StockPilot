@@ -7,7 +7,7 @@ namespace ConsoleStockPilot
 {
     internal class Program
     {
-        private static ConsoleView _view = new ConsoleView();
+        private static ConsoleView _view = new ConsoleView("https://localhost:7132/");
 
         static async Task Main(string[] args)
         {
