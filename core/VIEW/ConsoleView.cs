@@ -4,6 +4,8 @@ using System.Net;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VIEW
 {
@@ -14,7 +16,7 @@ namespace VIEW
         {
             client.BaseAddress = new Uri(baseUrl);
             client.Timeout = TimeSpan.FromSeconds(10);
-            client.DefaultRequestHeaders.Add("X-Api-Key", "348thGFubg7345uff84BIBJJG%fjdgndjgu");
+            client.DefaultRequestHeaders.Add("X-Api-Key", "ng45ng40gn90n90g24ng29");
         }
 
         public User localUser = new User();
@@ -251,27 +253,97 @@ namespace VIEW
             return $"{result.Error}\nStatus: {result.Status} ({(int)result.Status})";
         }
 
-        public async Task<string> CreateCoin()
+        public async Task BuyCoin()
         {
-            Console.WriteLine("----- Create Coin -----");
-            string coinNameInput, coinValueInput;
+            if (localUser.Id <= 0)
+            {
+                Console.WriteLine("You must be logged in.");
+                return;
+            }
+
+            Console.WriteLine("Enter the ID and quantity of the coin you want to buy.");
+            int id = 0;
+            decimal quantity = 0;
             do
             {
-                Console.Write("Coin Name: ");
-                coinNameInput = Console.ReadLine();
-            } while (string.IsNullOrEmpty(coinNameInput));
+                Console.Write("ID: ");
+                string typedId = Console.ReadLine();
+
+                if (!int.TryParse(typedId, out id))
+                    Console.WriteLine("The ID must be a number.");
+
+                if (id <= 0)
+                    Console.WriteLine("The ID must be a positive number.");
+
+            } while (id <= 0);
 
             do
             {
-                Console.Write("Coin Value: ");
-                coinValueInput = Console.ReadLine();
-            } while (string.IsNullOrEmpty(coinValueInput) && );
+                Console.Write("Quantity: ");
+                string typedQuantity = Console.ReadLine();
 
-           
+                if (!decimal.TryParse(typedQuantity, out quantity))
+                    Console.WriteLine("The quantity must be a number.");
+
+                if (quantity <= 0)
+                    Console.WriteLine("The quantity must be greater than zero.");
+
+            } while (quantity <= 0);
+
+            var (status, coin, error) = await HttpBuy(id, localUser.Id, quantity);
+
+            switch (status)
+            {
+                case HttpStatusCode.OK:
+                    Console.WriteLine($"Purchase successful: {quantity} x {coin?.Name}.");
+                    break;
+
+                case HttpStatusCode.Unauthorized:
+                case HttpStatusCode.Forbidden:
+                    Console.WriteLine("Access denied. Check your API key or login.");
+                    break;
+
+                case HttpStatusCode.NotFound:
+                    Console.WriteLine($"Coin with ID {id} was not found.");
+                    break;
+
+                case HttpStatusCode.BadRequest:
+                    Console.WriteLine($"Purchase failed: {error}");
+                    break;
+
+                default:
+                    Console.WriteLine($"Unexpected error ({(int)status}): {error}");
+                    break;
+            }
         }
 
-        //----Http
+ 
 
+        //----Http
+        
+        private async Task<(HttpStatusCode Status, Coin? Coin, string? Error)> HttpBuy(int coinId, int userId, decimal quantity)
+        {
+            if (coinId <= 0)
+                throw new ArgumentNullException(nameof(coinId));
+
+            var form = new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                ["userId"] = userId.ToString(),
+                ["coinId"] = coinId.ToString(),
+                ["quantity"] = quantity.ToString(System.Globalization.CultureInfo.InvariantCulture)
+            });
+
+            var response = await client.PostAsync("api/Coin/buy", form);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var coin = await response.Content.ReadFromJsonAsync<Coin>();
+                return (response.StatusCode, coin, null);
+            }
+
+            var error = await response.Content.ReadAsStringAsync();
+            return (response.StatusCode, null, error);
+        }
         private async Task<(HttpStatusCode Status, User? User, string? Error)> HttpLogn(User user)
         {
             try

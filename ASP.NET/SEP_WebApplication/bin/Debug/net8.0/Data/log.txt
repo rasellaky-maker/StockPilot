@@ -118,3 +118,47 @@
 2026-11-08 18:27:05 [INFO] User registered: Id=3, username 'gkropfberger'
 2026-11-08 18:28:46 [INFO] User registered: Id=4, username 'alex'
 2026-11-08 18:29:36 [INFO] User registered: Id=5, username 'pan'
+2026-11-08 18:32:06 [INFO] User registered: Id=6, username '-registrate'
+2026-11-08 18:35:58 [WARN] Register bad input (username '123'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
+2026-11-08 18:36:14 [INFO] User registered: Id=7, username 'kaan'
+2026-11-08 18:39:25 [INFO] User registered: Id=8, username 'ovali'
+2026-11-10 12:00:49 [INFO] User registered: Id=1, username 'oleg'
+2026-11-10 12:05:33 [INFO] Login succeeded: username 'oleg'
+2026-11-10 12:07:09 [WARN] Buy failed: user 1, coin 2, quantity 1 (coin/wallet not found or insufficient funds)
+2026-11-10 12:07:57 [WARN] Buy failed: user 1, coin 2, quantity 1 (coin/wallet not found or insufficient funds)
+2026-11-10 12:10:11 [INFO] User registered: Id=2, username 'alex'
+2026-11-10 12:10:30 [INFO] Buy succeeded: user 2, coin 3, quantity 1
+2026-11-10 12:10:34 [WARN] Buy failed: user 2, coin 2, quantity 1 (coin/wallet not found or insufficient funds)
+2026-11-10 12:11:07 [INFO] Login succeeded: username 'alex'
+2026-11-11 16:12:23 [INFO] Login succeeded: username 'oleg'
+2026-11-11 16:14:58 [INFO] Login succeeded: username 'oleg'
+2026-11-11 17:36:35 [ERROR] Login service unavailable (username 'oleg'): System.InvalidOperationException: The database service is unavailable.
+ ---> MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnectorSemanticConventionsKinds conventionsKinds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1415
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 481
+   at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 768
+   at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 773
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 116
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 150
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 1090
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 563
+   at DAL.UserRepository.SelectByUsername(String username)
+   --- End of inner exception stack trace ---
+   at DAL.UserRepository.SelectByUsername(String username)
+   at BLL.CoreServisecs.UserService.LogIn(String username, String password)
+   at SEP_WebApplication.Controllers.UserController.Login(String username, String password) in D:\VisualStudioDaten\Projekts\StockPilot\ASP.NET\SEP_WebApplication\Controllers\UserController.cs:line 62
+2026-11-11 17:36:47 [ERROR] Login service unavailable (username 'oleg'): System.InvalidOperationException: The database service is unavailable.
+ ---> MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnectorSemanticConventionsKinds conventionsKinds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1415
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 481
+   at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 768
+   at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 773
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 116
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 150
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 1090
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 563
+   at DAL.UserRepository.SelectByUsername(String username)
+   --- End of inner exception stack trace ---
+   at DAL.UserRepository.SelectByUsername(String username)
+   at BLL.CoreServisecs.UserService.LogIn(String username, String password)
+   at SEP_WebApplication.Controllers.UserController.Login(String username, String password) in D:\VisualStudioDaten\Projekts\StockPilot\ASP.NET\SEP_WebApplication\Controllers\UserController.cs:line 62

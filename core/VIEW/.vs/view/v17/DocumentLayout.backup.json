@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\core\\VIEW\\",
+  "WorkspaceRootPath": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\view\\consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|d:\\visualstudiodaten\\projekts\\stockpilot\\core\\view\\consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|d:\\vspojekts\\stockexchangeprojekt\\core\\view\\viewattributs\\pricechart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|d:\\visualstudiodaten\\projekts\\stockpilot\\core\\view\\viewattributs\\pricechart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:viewattributs\\pricechart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a8466fe-5a05-4f81-ad45-7d7c1316817e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -28,26 +40,37 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PriceChart.cs",
-              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\VIEW\\ViewAttributs\\PriceChart.cs",
+              "DocumentMoniker": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\ViewAttributs\\PriceChart.cs",
               "RelativeDocumentMoniker": "ViewAttributs\\PriceChart.cs",
-              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\VIEW\\ViewAttributs\\PriceChart.cs",
+              "ToolTip": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\ViewAttributs\\PriceChart.cs",
               "RelativeToolTip": "ViewAttributs\\PriceChart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAABRwBMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T13:38:23.227Z"
+              "WhenOpened": "2026-11-06T13:38:23.227Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ConsoleView.cs",
-              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\core\\VIEW\\ConsoleView.cs",
+              "DocumentMoniker": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\ConsoleView.cs",
               "RelativeDocumentMoniker": "ConsoleView.cs",
-              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\core\\VIEW\\ConsoleView.cs",
+              "ToolTip": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\ConsoleView.cs",
               "RelativeToolTip": "ConsoleView.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAcwAABAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANQAAAAAAAAAAAAAAAQBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-02T18:39:32.092Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1081,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

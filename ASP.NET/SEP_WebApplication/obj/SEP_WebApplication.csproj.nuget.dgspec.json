@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj": {}
+    "D:\\VisualStudioDaten\\Projekts\\StockPilot\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj": {}
   },
   "projects": {
-    "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj": {
+    "D:\\VisualStudioDaten\\Projekts\\StockPilot\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj",
+        "projectUniqueName": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj",
         "projectName": "SEP_WebApplication",
-        "projectPath": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj",
-        "packagesPath": "C:\\Users\\rasel\\.nuget\\packages\\",
-        "outputPath": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\obj\\",
+        "projectPath": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\ASP.NET\\SEP_WebApplication\\SEP_WebApplication.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\ASP.NET\\SEP_WebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Apps\\VisualStudio2026\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rasel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,7 +31,6 @@
         },
         "frameworks": {
           "net8.0": {
-            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -46,11 +45,10 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
-          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "MySqlConnector": {
@@ -81,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

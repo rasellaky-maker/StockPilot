@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\vspojekts\\StockExchangeProjekt\\gui\\ConsoleStockPilot\\",
+  "WorkspaceRootPath": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\gui\\ConsoleStockPilot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|d:\\vspojekts\\stockexchangeprojekt\\gui\\consolestockpilot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|d:\\visualstudiodaten\\projekts\\stockpilot\\gui\\consolestockpilot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,8 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a8466fe-5a05-4f81-ad45-7d7c1316817e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -24,14 +36,24 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\vspojekts\\StockExchangeProjekt\\gui\\ConsoleStockPilot\\Program.cs",
+              "DocumentMoniker": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\gui\\ConsoleStockPilot\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\vspojekts\\StockExchangeProjekt\\gui\\ConsoleStockPilot\\Program.cs",
+              "ToolTip": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\gui\\ConsoleStockPilot\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA6wDsAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-02T18:41:29.459Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1081,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

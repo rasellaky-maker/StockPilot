@@ -251,33 +251,41 @@
         "tags": [
           "Coin"
         ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "coinId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "quantity",
-            "in": "query",
-            "schema": {
-              "type": "number",
-              "format": "double",
-              "default": 1
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "coinId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "quantity": {
+                    "type": "number",
+                    "format": "double",
+                    "default": 1
+                  }
+                }
+              },
+              "encoding": {
+                "userId": {
+                  "style": "form"
+                },
+                "coinId": {
+                  "style": "form"
+                },
+                "quantity": {
+                  "style": "form"
+                }
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK",
@@ -838,7 +846,7 @@
     "securitySchemes": {
       "ApiKey": {
         "type": "apiKey",
-        "description": "Введите API-ключ в поле Value",
+        "description": "Ââåäèòå API-êëþ÷ â ïîëå Value",
         "name": "X-Api-Key",
         "in": "header"
       }

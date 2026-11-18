@@ -7,7 +7,7 @@ namespace ConsoleStockPilot
 {
     internal class Program
     {
-        private static ConsoleView _view = new ConsoleView("https://localhost:7132/");
+        private static ConsoleView _view = new ConsoleView("http://stockpilott.runasp.net");
 
         static async Task Main(string[] args)
         {
@@ -58,6 +58,10 @@ namespace ConsoleStockPilot
 
                         case "-mywallet":
                             Console.WriteLine(await _view.GetWallet());
+                            break;
+
+                        case "-buy":
+                            await _view.BuyCoin();
                             break;
 
                         case "":

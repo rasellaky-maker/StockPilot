@@ -170,7 +170,7 @@ namespace SEP_WebApplication.Controllers
 
         [HttpPost("buy")]
         [ApiKey]
-        public async Task<ActionResult<bool>> Buy(int userId, int coinId, decimal quantity = 1)
+        public async Task<ActionResult<bool>> Buy([FromForm] int userId, [FromForm] int coinId, [FromForm] decimal quantity = 1)
         {
             try
             {
