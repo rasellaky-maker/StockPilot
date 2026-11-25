@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\pojekts\\sep\\core\\BO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|e:\\pojekts\\sep\\core\\bo\\models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|e:\\pojekts\\sep\\core\\bo\\models\\pricepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\pricepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|e:\\pojekts\\sep\\core\\bo\\models\\userscoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\userscoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|e:\\pojekts\\sep\\core\\bo\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|e:\\pojekts\\sep\\core\\bo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|e:\\pojekts\\sep\\core\\bo\\models\\coinpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF6BCF9B-BFC9-46D4-BF44-53F4EEC3B59B}|BO.csproj|solutionrelative:models\\coinpricehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersCoins.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\BO\\Models\\UsersCoins.cs",
+              "RelativeDocumentMoniker": "Models\\UsersCoins.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\BO\\Models\\UsersCoins.cs",
+              "RelativeToolTip": "Models\\UsersCoins.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:40:04.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PricePoint.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\BO\\Models\\PricePoint.cs",
+              "RelativeDocumentMoniker": "Models\\PricePoint.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\BO\\Models\\PricePoint.cs",
+              "RelativeToolTip": "Models\\PricePoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:40:04.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoinPriceHistory.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\BO\\Models\\CoinPriceHistory.cs",
+              "RelativeDocumentMoniker": "Models\\CoinPriceHistory.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\BO\\Models\\CoinPriceHistory.cs",
+              "RelativeToolTip": "Models\\CoinPriceHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:40:04.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\BO\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\BO\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswB8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:40:04.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\BO\\Models\\Coin.cs",
+              "RelativeDocumentMoniker": "Models\\Coin.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\BO\\Models\\Coin.cs",
+              "RelativeToolTip": "Models\\Coin.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:40:04.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\BO\\Models\\Wallet.cs",
+              "RelativeDocumentMoniker": "Models\\Wallet.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\BO\\Models\\Wallet.cs",
+              "RelativeToolTip": "Models\\Wallet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:40:04.421Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

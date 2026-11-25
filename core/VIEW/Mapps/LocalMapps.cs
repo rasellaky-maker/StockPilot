@@ -1,0 +1,76 @@
+﻿using BO.Models;
+using System.Globalization;
+using System.Text;
+namespace view.Mapps
+{
+    public static class LocalMapps
+    {
+        internal static string ConnectionError()
+        {
+            return "Unable to connect to the server.\n" +
+                   "The server may be temporarily unavailable.\n" +
+                   "Please try again later.";
+        }
+        internal static string TimeoutError()
+        {
+            return "The request took too long.\n" +
+                   "Please try again later.";
+        }
+
+        internal static string InvalidFormatError()
+        {
+            return "The server returned data in an unexpected format.";
+        }
+
+        internal static string OutputMapp(List<Coin> coins, CultureInfo culture)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("+-----+----------------+----------------+-------+");
+            sb.AppendLine("| id  |      Name      | Value          |Holders|");
+            sb.AppendLine("+-----+----------------+----------------+-------+");
+
+            foreach (var el in coins)
+            {
+                sb.AppendLine(
+                    $"| {el.Id,-3} | {el.Name,-14} | {el.Value.ToString("N2", culture),-14} | {el.NumberOfBuyers,-5} |"
+                );
+            }
+
+            sb.AppendLine("+-----+----------------+----------------+-------+");
+            sb.AppendLine($"Total coins: {coins.Count}");
+
+            return sb.ToString();
+        }
+
+        internal static string ReadPassword()
+        {
+            Console.Write("Password: ");
+
+            string password = "";
+
+            ConsoleKeyInfo key;
+
+            while ((key = Console.ReadKey(true)).Key != ConsoleKey.Enter)
+            {
+                if (key.Key == ConsoleKey.Backspace)
+                {
+                    if (password.Length > 0)
+                    {
+                        password = password[..^1];
+                        Console.Write("\b \b");
+                    }
+                }
+                else if (!char.IsControl(key.KeyChar))
+                {
+                    password += key.KeyChar;
+                    Console.Write("*");
+                }
+            }
+
+            Console.WriteLine();
+
+            return password;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+USE senjor_stockexchange;
+
 CREATE TABLE IF NOT EXISTS `User` (
     Id             INT PRIMARY KEY AUTO_INCREMENT,
     Username       VARCHAR(255) NOT NULL UNIQUE,

@@ -1,10 +1,10 @@
-﻿using BLL.CoreServisecs;
+using BLL.CoreServisecs;
 using BLL.Logger;
 using BO.Models;
 using Microsoft.AspNetCore.Mvc;
-using MyApi.Attributes;
 using MySqlConnector;
 using SEP_WebApplication.Attributes;
+using SEP_WebApplication.Infrastructure;
 
 namespace SEP_WebApplication.Controllers
 {
@@ -12,51 +12,61 @@ namespace SEP_WebApplication.Controllers
     [ApiController]
     public class CoinController : ControllerBase
     {
-        private readonly CoinService _coinService = new CoinService(MainConnnection.Connection);
-        internal static readonly UserCoinService _userCoinService = new UserCoinService(MainConnnection.Connection);
-        private readonly CoinPriceHistoryService _coinPriceHistoryService = new CoinPriceHistoryService(MainConnnection.Connection);
+        private readonly CoinService _coinService;
+        private readonly UserCoinService _userCoinService;
+        private readonly CoinPriceHistoryService _coinPriceHistoryService;
+        private readonly UserService _userService;
+
+        public CoinController(
+            CoinService coinService,
+            UserCoinService userCoinService,
+            CoinPriceHistoryService coinPriceHistoryService,
+            UserService userService)
+        {
+            _coinService = coinService;
+            _userCoinService = userCoinService;
+            _coinPriceHistoryService = coinPriceHistoryService;
+            _userService = userService;
+        }
+
+        private async Task<ObjectResult> DatabaseUnavailable(Exception ex, string context)
+        {
+            await Log.WriteLine($"{context}: {ex}", "ERROR");
+            return StatusCode(StatusCodes.Status503ServiceUnavailable, "Database service is unavailable.");
+        }
 
         [HttpGet("GetAll")]
         public async Task<ActionResult<List<Coin>>> Get()
         {
             try
             {
-                var coins = await _coinService.GetAsync();
+                var coins = await DbRetry.RunAsync(() => _coinService.GetAsync());
                 return Ok(coins);
             }
-            catch (MySqlException ex)
+            catch (Exception ex) when (ex is MySqlException or InvalidOperationException)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                await Log.WriteLine($"GetAll failed: {ex}", "ERROR");
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return await DatabaseUnavailable(ex, "GetAll failed");
             }
         }
 
-        [HttpGet("id:{id}")]
-        public async Task<ActionResult<Coin?>> GetById(int id)
+        [HttpGet("id/{id:int}")]
+        public async Task<ActionResult<Coin>> GetById(int id)
         {
+            if (id <= 0)
+                return BadRequest("Id must be greater than 0.");
+
             try
             {
-                var coin = await _coinService.GetAsync(id);
-                if (coin == null)
-                    return NotFound(id);
+                var coin = await DbRetry.RunAsync(() => _coinService.GetAsync(id));
+
+                if (coin is null)
+                    return NotFound($"Coin with id {id} was not found.");
+
                 return Ok(coin);
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch (Exception ex) when (ex is MySqlException or InvalidOperationException)
             {
-                return BadRequest($"Invalid ID: {ex.Message}");
-            }
-            catch (MySqlException ex)
-            {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                await Log.WriteLine($"GetById failed (coin {id}): {ex}", "ERROR");
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return await DatabaseUnavailable(ex, $"GetById failed (coin {id})");
             }
         }
 
@@ -68,37 +78,31 @@ namespace SEP_WebApplication.Controllers
 
             try
             {
-                var search = await _coinService.SearchAsync(name);
+                var search = await DbRetry.RunAsync(() => _coinService.SearchAsync(name));
                 return Ok(search);
             }
-            catch (ArgumentNullException)
+            catch (Exception ex) when (ex is MySqlException or InvalidOperationException)
             {
-                return await Get();
-            }
-            catch (MySqlException ex)
-            {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                await Log.WriteLine($"Search failed ('{name}'): {ex}", "ERROR");
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return await DatabaseUnavailable(ex, $"Search failed ('{name}')");
             }
         }
 
-        [HttpGet("{id}/history")]
+        [HttpGet("{id:int}/history")]
         public async Task<ActionResult<List<PricePoint>>> GetHistory(int id, [FromQuery] string range = "1h")
         {
+            if (id <= 0)
+                return BadRequest("Id must be greater than 0.");
+
             try
             {
-                var data = await _coinPriceHistoryService.GetHistoryAsync(id, range);
+                var data = await DbRetry.RunAsync(() => _coinPriceHistoryService.GetHistoryAsync(id, range));
                 return Ok(data);
             }
             catch (ArgumentException ex)
             {
                 return BadRequest(ex.Message);
             }
-            catch (InvalidOperationException ex)
+            catch (Exception ex) when (ex is MySqlException or InvalidOperationException)
             {
                 await Log.WriteLine($"History failed (coin {id}, range {range}): {ex}", "ERROR");
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "Preishistorie ist momentan nicht verfügbar.");
@@ -107,71 +111,117 @@ namespace SEP_WebApplication.Controllers
 
         [HttpPost("create")]
         [ApiKey]
-        public async Task<ActionResult<Coin>> Create([FromQuery] int id, [FromBody] Coin coin)
+        public async Task<ActionResult<Coin>> Create([FromQuery(Name = "userId")] int userId, [FromBody] Coin coin)
         {
+            if (userId <= 0)
+                return BadRequest("User id must be greater than 0.");
+
+            if (coin is null || string.IsNullOrWhiteSpace(coin.Name))
+                return BadRequest("Name cannot be empty.");
+
+            if (coin.Value <= 0)
+                return BadRequest("Value must be greater than 0.");
+
+            var name = coin.Name.Trim();
+
             try
             {
-                var userService = new UserService(MainConnnection.Connection);
+                // Check -> reserve -> create must not run twice in parallel for the same user.
+                using var userLock = await UserLock.AcquireAsync(userId, HttpContext.RequestAborted);
 
-                var user = await userService.GetAsync(id);
+                var user = await _userService.GetAsync(userId);
                 if (user == null)
                 {
-                    await Log.WriteLine($"Create coin failed: user {id} not found", "WARN");
-                    return NotFound($"User with id {id} was not found.");
+                    await Log.WriteLine($"Create coin failed: user {userId} not found", "WARN");
+                    return NotFound($"User with id {userId} was not found.");
                 }
 
                 if (user.AvailableCoins <= 0)
                 {
-                    await Log.WriteLine($"Create coin denied: user {id} has no available coins", "WARN");
+                    await Log.WriteLine($"Create coin denied: user {userId} has no available coins", "WARN");
                     return BadRequest("User has no available coins.");
                 }
 
-                if (await _coinService.GetAsync(coin.Name) != null)
+                if (await _coinService.GetAsync(name) != null)
                 {
-                    await Log.WriteLine($"Create coin failed: name '{coin.Name}' already exists (user {id})", "WARN");
-                    return BadRequest($"A coin with the name '{coin.Name}' already exists.");
+                    await Log.WriteLine($"Create coin failed: name '{name}' already exists (user {userId})", "WARN");
+                    return BadRequest($"A coin with the name '{name}' already exists.");
                 }
 
-                var result = await _coinService.CreateAsync(coin.Name, coin.Value.ToString(), coin.Image, id);
+                // Reserve the "coin slot" first: if creating the coin fails, it is given back.
+                user.AvailableCoins--;
+                var reserved = await _userService.Update(userId, user);
+                if (reserved <= 0)
+                {
+                    await Log.WriteLine($"Create coin failed: could not update user {userId}", "ERROR");
+                    return StatusCode(StatusCodes.Status500InternalServerError, "The user could not be updated.");
+                }
+
+                Coin? result;
+                try
+                {
+                    result = await _coinService.CreateAsync(name, coin.Value.ToString(), coin.Image, userId);
+                }
+                catch
+                {
+                    await RestoreAvailableCoinAsync(userId);
+                    throw;
+                }
+
                 if (result == null || result.Id <= 0)
                 {
-                    await Log.WriteLine($"Create coin failed: service returned no result (user {id}, name '{coin.Name}')", "ERROR");
+                    await RestoreAvailableCoinAsync(userId);
+                    await Log.WriteLine($"Create coin failed: service returned no result (user {userId}, name '{name}')", "ERROR");
                     return StatusCode(StatusCodes.Status503ServiceUnavailable, "Failed to create the coin.");
                 }
 
-                user.AvailableCoins--;
-
-                var updateUserResult = await userService.Update(id, user);
-                if (updateUserResult <= 0)
-                {
-                    await Log.WriteLine($"INCONSISTENT STATE: coin {result.Id} ('{result.Name}') created, but user {id} was not updated", "ERROR");
-                    return StatusCode(StatusCodes.Status500InternalServerError, "Coin was created, but the user could not be updated.");
-                }
-
-                await Log.WriteLine($"Coin created: Id={result.Id}, Name='{result.Name}', Value={result.Value}, CreatedByUserId={id}, AvailableCoinsLeft={user.AvailableCoins}");
+                await Log.WriteLine($"Coin created: Id={result.Id}, Name='{result.Name}', Value={result.Value}, CreatedByUserId={userId}, AvailableCoinsLeft={user.AvailableCoins}");
                 return Ok(result);
             }
             catch (ArgumentException ex)
             {
-                await Log.WriteLine($"Create coin bad input (user {id}): {ex.Message}", "WARN");
+                await Log.WriteLine($"Create coin bad input (user {userId}): {ex.Message}", "WARN");
                 return BadRequest(ex.Message);
             }
             catch (InvalidOperationException ex)
             {
-                await Log.WriteLine($"Create coin service unavailable (user {id}): {ex}", "ERROR");
+                await Log.WriteLine($"Create coin service unavailable (user {userId}): {ex}", "ERROR");
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "The service is temporarily unavailable.");
             }
             catch (Exception ex)
             {
-                await Log.WriteLine($"Create coin unexpected error (user {id}): {ex}", "ERROR");
+                await Log.WriteLine($"Create coin unexpected error (user {userId}): {ex}", "ERROR");
                 return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred.");
+            }
+        }
+
+        private async Task RestoreAvailableCoinAsync(int userId)
+        {
+            try
+            {
+                var current = await _userService.GetAsync(userId);
+                if (current is null)
+                    return;
+
+                current.AvailableCoins++;
+                await _userService.Update(userId, current);
+            }
+            catch (Exception ex)
+            {
+                await Log.WriteLine($"INCONSISTENT STATE: could not give back the available coin of user {userId}: {ex}", "ERROR");
             }
         }
 
         [HttpPost("buy")]
         [ApiKey]
-        public async Task<ActionResult<bool>> Buy([FromForm] int userId, [FromForm] int coinId, [FromForm] decimal quantity = 1)
+        public async Task<ActionResult<bool>> Buy([FromQuery] int userId, [FromQuery] int coinId, [FromQuery] decimal quantity = 1)
         {
+            if (userId <= 0 || coinId <= 0)
+                return BadRequest("userId and coinId must be greater than 0.");
+
+            if (quantity <= 0)
+                return BadRequest("Quantity must be greater than 0.");
+
             try
             {
                 var result = await _userCoinService.BuyAsync(userId, coinId, quantity);
@@ -208,8 +258,14 @@ namespace SEP_WebApplication.Controllers
 
         [HttpPost("sell")]
         [ApiKey]
-        public async Task<ActionResult<decimal>> Sell(int userId, int coinId, decimal quantity = 1)
+        public async Task<ActionResult<decimal>> Sell([FromQuery] int userId, [FromQuery] int coinId, [FromQuery] decimal quantity = 1)
         {
+            if (userId <= 0 || coinId <= 0)
+                return BadRequest("userId and coinId must be greater than 0.");
+
+            if (quantity <= 0)
+                return BadRequest("Quantity must be greater than 0.");
+
             try
             {
                 var revenue = await _userCoinService.SellAsync(userId, coinId, quantity);
@@ -239,21 +295,21 @@ namespace SEP_WebApplication.Controllers
             }
         }
 
-        [HttpGet("user/{userId}")]
+        [HttpGet("user/{userId:int}")]
         [ApiKey]
         public async Task<ActionResult<List<UsersCoins>>> GetUserCoins(int userId)
         {
             if (userId <= 0)
             {
                 await Log.WriteLine($"GetUserCoins bad input: invalid userId {userId}", "WARN");
-                return BadRequest();
+                return BadRequest("Id must be greater than 0.");
             }
 
             try
             {
-                var result = await _userCoinService.ShowCoins(userId);
+                var result = await DbRetry.RunAsync(() => _userCoinService.ShowCoins(userId));
                 await Log.WriteLine($"GetUserCoins: user {userId}, {result.Count} entries returned");
-                return result;
+                return Ok(result);
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -269,6 +325,26 @@ namespace SEP_WebApplication.Controllers
             {
                 await Log.WriteLine($"GetUserCoins unexpected error (user {userId}): {ex}", "ERROR");
                 return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred.");
+            }
+        }
+
+        [HttpGet("created-by/{userId}")]
+        public async Task<IActionResult> GetCreatedCoins(int userId)
+        {
+            if (userId <= 0)
+                return BadRequest("Invalid user ID.");
+
+            try
+            {
+                var coins = await DbRetry.RunAsync(
+                    () => _userCoinService.ShowCreatedCoins(userId)
+                );
+
+                return Ok(coins);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
             }
         }
     }

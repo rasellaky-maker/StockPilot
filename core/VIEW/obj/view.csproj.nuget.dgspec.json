@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\view.csproj": {}
+    "E:\\pojekts\\sep\\core\\VIEW\\view.csproj": {}
   },
   "projects": {
-    "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\view.csproj": {
+    "E:\\pojekts\\sep\\core\\VIEW\\view.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\view.csproj",
+        "projectUniqueName": "E:\\pojekts\\sep\\core\\VIEW\\view.csproj",
         "projectName": "view",
-        "projectPath": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\view.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\VisualStudioDaten\\Projekts\\StockPilot\\core\\VIEW\\obj\\",
+        "projectPath": "E:\\pojekts\\sep\\core\\VIEW\\view.csproj",
+        "packagesPath": "C:\\Users\\rasel\\.nuget\\packages\\",
+        "outputPath": "E:\\pojekts\\sep\\core\\VIEW\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Apps\\VisualStudio2026\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rasel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,9 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net8.0-windows": {
+            "framework": "net8.0-windows7.0",
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -45,11 +46,18 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net8.0-windows": {
+          "framework": "net8.0-windows7.0",
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "LiveChartsCore.SkiaSharpView.WinForms": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -64,9 +72,12 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

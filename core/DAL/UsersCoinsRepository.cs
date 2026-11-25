@@ -398,6 +398,62 @@ namespace DAL
             }
         }
 
+        public async Task<List<Coin>> SelectCreatedByUserIdAsync(int userId)
+        {
+            if (userId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(userId));
+
+            var result = new List<Coin>();
+
+            try
+            {
+                using var conn = new MySqlConnection(_connectionString);
+                await conn.OpenAsync();
+
+                const string query = @"
+                SELECT
+                        id,
+                        name,
+                        value,
+                        numberofbuyers,
+                        image,
+                        userid
+                    FROM coin
+                    WHERE userid = @id
+                    ORDER BY id;
+                ";
+
+                using var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = userId;
+
+                using var reader = await cmd.ExecuteReaderAsync();
+
+                while (await reader.ReadAsync())
+                {
+                    result.Add(new Coin(
+                        reader.GetInt32("id"),
+                        reader.GetString("name"),
+                        reader.GetDecimal("value"),
+                        reader.GetInt32("numberofbuyers"),
+                        reader.IsDBNull("image") ? null : reader.GetString("image"),
+                        reader.IsDBNull("userid") ? 0 : reader.GetInt32("userid")
+                    ));
+                }
+
+                return result;
+            }
+            catch (MySqlException ex)
+            {
+                throw new InvalidOperationException(
+                    "The database service is unavailable.", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(
+                    "An error occurred while reading created coins.", ex);
+            }
+        }
+
         private UsersCoins UsersCoinsReaderMap(MySqlDataReader reader)
         {
             return new UsersCoins(

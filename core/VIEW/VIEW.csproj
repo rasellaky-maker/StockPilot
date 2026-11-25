@@ -1,18 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Reference Include="BO">
-      <HintPath>..\BO\bin\Debug\net8.0\BO.dll</HintPath>
-    </Reference>
-    <Reference Include="view">
-      <HintPath>bin\Debug\net8.0\view.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="LiveChartsCore.SkiaSharpView.WinForms" Version="2.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="BO">
+	    <HintPath>..\BO\bin\Debug\net8.0\BO.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 
 </Project>

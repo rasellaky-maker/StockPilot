@@ -1,0 +1,16 @@
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.csproj.AssemblyReference.cache
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.GeneratedMSBuildEditorConfig.editorconfig
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.AssemblyInfoInputs.cache
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.AssemblyInfo.cs
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.csproj.CoreCompileInputs.cache
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.sourcelink.json
+E:\pojekts\sep\core\VIEW\bin\Debug\net8.0-windows\view.deps.json
+E:\pojekts\sep\core\VIEW\bin\Debug\net8.0-windows\view.dll
+E:\pojekts\sep\core\VIEW\bin\Debug\net8.0-windows\view.pdb
+E:\pojekts\sep\core\VIEW\bin\Debug\net8.0-windows\BO.dll
+E:\pojekts\sep\core\VIEW\bin\Debug\net8.0-windows\BO.pdb
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.csproj.Up2Date
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.dll
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\refint\view.dll
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\view.pdb
+E:\pojekts\sep\core\VIEW\obj\Debug\net8.0-windows\ref\view.dll

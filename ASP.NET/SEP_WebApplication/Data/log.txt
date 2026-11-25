@@ -122,6 +122,7 @@
 2026-11-08 18:35:58 [WARN] Register bad input (username '123'): Bitte geben Sie eine gültige E-Mail-Adresse ein.
 2026-11-08 18:36:14 [INFO] User registered: Id=7, username 'kaan'
 2026-11-08 18:39:25 [INFO] User registered: Id=8, username 'ovali'
+<<<<<<< Updated upstream
 2026-11-10 12:00:49 [INFO] User registered: Id=1, username 'oleg'
 2026-11-10 12:05:33 [INFO] Login succeeded: username 'oleg'
 2026-11-10 12:07:09 [WARN] Buy failed: user 1, coin 2, quantity 1 (coin/wallet not found or insufficient funds)
@@ -136,12 +137,21 @@
  ---> MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
    at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnectorSemanticConventionsKinds conventionsKinds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1415
    at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 481
+=======
+2026-11-13 15:32:53 [ERROR] GetAll failed: System.InvalidOperationException: The database service is unavailable.
+ ---> MySqlConnector.MySqlException (0x80004005): Access denied for user 'senjor_user'@'localhost' (using password: YES)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1185
+   at MySqlConnector.Core.ServerSession.SendClearPasswordAsync(String authenticationMethod, String password, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1035
+   at MySqlConnector.Core.ServerSession.SwitchAuthenticationAsync(ConnectionSettings cs, String password, PayloadData payload, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 976
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int64 startingTimestamp, ILoadBalancer loadBalancer, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 602
+>>>>>>> Stashed changes
    at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 768
    at MySqlConnector.Core.ServerSession.ConnectAndRedirectAsync(ILogger connectionLogger, ILogger poolLogger, IConnectionPoolMetadata pool, ConnectionSettings cs, ILoadBalancer loadBalancer, MySqlConnection connection, Action`4 logMessage, Int64 startingTimestamp, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 773
    at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 116
    at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int64 startingTimestamp, Int32 timeoutMilliseconds, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 150
    at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 1090
    at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 563
+<<<<<<< Updated upstream
    at DAL.UserRepository.SelectByUsername(String username)
    --- End of inner exception stack trace ---
    at DAL.UserRepository.SelectByUsername(String username)
@@ -177,3 +187,28 @@
    at DAL.UserRepository.SelectByUsername(String username)
    at BLL.CoreServisecs.UserService.LogIn(String username, String password)
    at SEP_WebApplication.Controllers.UserController.Login(String username, String password) in D:\VisualStudioDaten\Projekts\StockPilot\ASP.NET\SEP_WebApplication\Controllers\UserController.cs:line 62
+=======
+   at DAL.CoinRepository.SelectAsync()
+   --- End of inner exception stack trace ---
+   at DAL.CoinRepository.SelectAsync()
+   at BLL.CoreServisecs.CoinService.GetAsync()
+   at SEP_WebApplication.Controllers.CoinController.Get() in E:\ASP.NET\SEP_WebApplication\Controllers\CoinController.cs:line 24
+2026-11-13 15:34:06 [ERROR] GetAll failed: System.InvalidOperationException: The database service is unavailable.
+ ---> MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 1107
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 563
+   at DAL.CoinRepository.SelectAsync()
+   --- End of inner exception stack trace ---
+   at DAL.CoinRepository.SelectAsync()
+   at BLL.CoreServisecs.CoinService.GetAsync()
+   at SEP_WebApplication.Controllers.CoinController.Get() in E:\ASP.NET\SEP_WebApplication\Controllers\CoinController.cs:line 24
+2026-11-13 15:39:44 [ERROR] GetAll failed: System.InvalidOperationException: The database service is unavailable.
+ ---> MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int64 startingTimestamp, Activity activity, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 1107
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 563
+   at DAL.CoinRepository.SelectAsync()
+   --- End of inner exception stack trace ---
+   at DAL.CoinRepository.SelectAsync()
+   at BLL.CoreServisecs.CoinService.GetAsync()
+   at SEP_WebApplication.Controllers.CoinController.Get() in E:\ASP.NET\SEP_WebApplication\Controllers\CoinController.cs:line 24
+>>>>>>> Stashed changes

@@ -75,7 +75,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -96,6 +96,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SEP_WebApplication.Controllers.CoinController",
+    "Method": "GetCreatedCoins",
+    "RelativePath": "api/Coin/created-by/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SEP_WebApplication.Controllers.CoinController",
@@ -120,7 +136,7 @@
   {
     "ContainingType": "SEP_WebApplication.Controllers.CoinController",
     "Method": "GetById",
-    "RelativePath": "api/Coin/id:{id}",
+    "RelativePath": "api/Coin/id/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -335,7 +351,7 @@
     ]
   },
   {
-    "ContainingType": "SEP_WebApplication.Attributes.WalletController",
+    "ContainingType": "SEP_WebApplication.Controllers.WalletController",
     "Method": "Get",
     "RelativePath": "api/Wallet",
     "HttpMethod": "GET",
@@ -355,7 +371,7 @@
     ]
   },
   {
-    "ContainingType": "SEP_WebApplication.Attributes.WalletController",
+    "ContainingType": "SEP_WebApplication.Controllers.WalletController",
     "Method": "Update",
     "RelativePath": "api/Wallet/{id}",
     "HttpMethod": "PUT",
@@ -386,7 +402,7 @@
     ]
   },
   {
-    "ContainingType": "SEP_WebApplication.Attributes.WalletController",
+    "ContainingType": "SEP_WebApplication.Controllers.WalletController",
     "Method": "GetByUserId",
     "RelativePath": "api/Wallet/{userId}",
     "HttpMethod": "GET",
@@ -407,6 +423,38 @@
           "application/json",
           "text/json"
         ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SEP_WebApplication.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CMain\u003Eb__1_5",
+    "RelativePath": "health",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SEP_WebApplication.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CMain\u003Eb__1_6",
+    "RelativePath": "health/db",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]

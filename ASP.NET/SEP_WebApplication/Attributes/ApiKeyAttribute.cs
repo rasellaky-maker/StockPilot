@@ -1,14 +1,15 @@
-﻿using System.Security.Cryptography;
+using System.Security.Cryptography;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace MyApi.Attributes;
+namespace SEP_WebApplication.Attributes;
 
 [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
 public class ApiKeyAttribute : Attribute, IAsyncActionFilter
 {
     private readonly string[] _configKeys;
+
     public ApiKeyAttribute() : this("ApiKey", "AdminApiKey") { }
 
     public ApiKeyAttribute(params string[] configKeys) => _configKeys = configKeys;
@@ -17,17 +18,36 @@ public class ApiKeyAttribute : Attribute, IAsyncActionFilter
     {
         var config = ctx.HttpContext.RequestServices.GetRequiredService<IConfiguration>();
 
-        if (!ctx.HttpContext.Request.Headers.TryGetValue("X-Api-Key", out var provided))
+        var expectedKeys = _configKeys
+            .Select(name => config[name])
+            .Where(key => !string.IsNullOrEmpty(key))
+            .Select(key => key!)
+            .ToArray();
+
+        // Keys are not configured on the server: that is a server problem, not the caller's fault.
+        if (expectedKeys.Length == 0)
+        {
+            var logger = ctx.HttpContext.RequestServices
+                .GetRequiredService<ILoggerFactory>().CreateLogger<ApiKeyAttribute>();
+            logger.LogError("None of the configuration keys [{Keys}] is set - rejecting request.",
+                string.Join(", ", _configKeys));
+            ctx.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            return;
+        }
+
+        if (!ctx.HttpContext.Request.Headers.TryGetValue("X-Api-Key", out var provided)
+            || string.IsNullOrEmpty(provided.ToString()))
         {
             ctx.Result = new UnauthorizedResult();
             return;
         }
 
+        var providedValue = provided.ToString();
         var ok = false;
-        foreach (var name in _configKeys)
+        foreach (var expected in expectedKeys)
         {
-            var expected = config[name];
-            if (!string.IsNullOrEmpty(expected) && SafeEquals(provided.ToString(), expected))
+            // No short-circuit: every key is compared, so timing does not reveal which one matched.
+            if (SafeEquals(providedValue, expected))
                 ok = true;
         }
 

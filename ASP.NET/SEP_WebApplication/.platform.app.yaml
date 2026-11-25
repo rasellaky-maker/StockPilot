@@ -1,0 +1,30 @@
+
+name: api
+type: 'dotnet:8.0'
+
+variables:
+  env:
+    DOTNET_CLI_HOME: /tmp/dotnet
+    HOME: /tmp
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+
+hooks:
+  build: |
+    set -xe
+    dotnet publish SEP_WebApplication.csproj \
+      -c Release \
+      -o "$PLATFORM_OUTPUT_DIR" \
+      -p:UseRazorBuildServer=false \
+      -p:UseSharedCompilation=false
+
+web:
+  commands:
+    start: "dotnet SEP_WebApplication.dll"
+
+  upstream:
+    socket_family: tcp
+
+  locations:
+    "/":
+      passthru: true

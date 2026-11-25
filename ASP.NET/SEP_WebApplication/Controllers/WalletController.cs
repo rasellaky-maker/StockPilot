@@ -1,18 +1,24 @@
-﻿using BLL.CoreServisecs;
+using BLL.CoreServisecs;
 using BLL.Logger;
 using BO.Models;
 using Microsoft.AspNetCore.Mvc;
-using MyApi.Attributes;
-using SEP_WebApplication.Controllers;
-using System.Reflection.Metadata;
+using SEP_WebApplication.Attributes;
+using SEP_WebApplication.Infrastructure;
 
-namespace SEP_WebApplication.Attributes
+namespace SEP_WebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class WalletController : ControllerBase
     {
-        private readonly WalletService _walletService = new WalletService(MainConnnection.Connection);
+        private readonly WalletService _walletService;
+        private readonly UserCoinService _userCoinService;
+
+        public WalletController(WalletService walletService, UserCoinService userCoinService)
+        {
+            _walletService = walletService;
+            _userCoinService = userCoinService;
+        }
 
         [HttpGet]
         [AdminApiKey]
@@ -20,9 +26,9 @@ namespace SEP_WebApplication.Attributes
         {
             try
             {
-                var result = await _walletService.GetAsync();
+                var result = await DbRetry.RunAsync(() => _walletService.GetAsync());
                 await Log.WriteLine($"Wallets listed by admin: {result.Count} entries returned");
-                return result;
+                return Ok(result);
             }
             catch (InvalidOperationException ex)
             {
@@ -36,10 +42,19 @@ namespace SEP_WebApplication.Attributes
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         [AdminApiKey]
-        public async Task<ActionResult<int>> Update(int id, Wallet wallet)
+        public async Task<ActionResult<int>> Update(int id, [FromBody] Wallet wallet)
         {
+            if (id <= 0)
+                return BadRequest("Id must be greater than 0.");
+
+            if (wallet is null || wallet.User is null || wallet.User.Id <= 0)
+                return BadRequest("The wallet must contain a user with a valid id.");
+
+            if (wallet.Balance < 0)
+                return BadRequest("Balance must not be negative.");
+
             try
             {
                 var rows = await _walletService.UpdateAsync(id, wallet);
@@ -50,8 +65,8 @@ namespace SEP_WebApplication.Attributes
                     return NotFound($"Wallet with id {id} was not found.");
                 }
 
-                await Log.WriteLine($"Wallet updated by admin: wallet {id}, userId={wallet.User?.Id}, new balance={wallet.Balance}");
-                return rows;
+                await Log.WriteLine($"Wallet updated by admin: wallet {id}, userId={wallet.User.Id}, new balance={wallet.Balance}");
+                return Ok(rows);
             }
             catch (ArgumentException ex)
             {
@@ -70,7 +85,7 @@ namespace SEP_WebApplication.Attributes
             }
         }
 
-        [HttpGet("{userId}")]
+        [HttpGet("{userId:int}")]
         [ApiKey]
         public async Task<ActionResult<Wallet>> GetByUserId(int userId)
         {
@@ -79,18 +94,23 @@ namespace SEP_WebApplication.Attributes
 
             try
             {
-                var result = await _walletService.GetByUserIdAsync(userId);
+                var result = await DbRetry.RunAsync(() => _walletService.GetByUserIdAsync(userId));
 
                 if (result == null)
-                    return NotFound($"Wallet with id {userId} not found.");
+                    return NotFound($"Wallet of user {userId} not found.");
 
-                result.UsersCoins = await CoinController._userCoinService.ShowCoins(userId);
+                result.UsersCoins = await DbRetry.RunAsync(() => _userCoinService.ShowCoins(userId));
                 return Ok(result);
+            }
+            catch (InvalidOperationException ex)
+            {
+                await Log.WriteLine($"Wallet get service unavailable (user {userId}): {ex}", "ERROR");
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, "The service is temporarily unavailable.");
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "An unexpected error occurred.");
+                await Log.WriteLine($"Wallet get unexpected error (user {userId}): {ex}", "ERROR");
+                return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred.");
             }
         }
     }

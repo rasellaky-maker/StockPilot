@@ -1,0 +1,9 @@
+
+services:
+  tests-linux:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    volumes:
+      - ./TestResults:/src/TestResults

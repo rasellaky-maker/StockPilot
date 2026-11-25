@@ -1,105 +1,36 @@
-﻿
-using System;
-using System.Threading.Tasks;
-using VIEW;
+﻿using VIEW;
 
 namespace ConsoleStockPilot
 {
     internal class Program
     {
-        private static ConsoleView _view = new ConsoleView("http://stockpilott.runasp.net");
-
-        static async Task Main(string[] args)
+        static async Task<int> Main(string[] args)
         {
-            if (args.Length == 0)
+            var view = new ConsoleView("https://stockpilott.runasp.net/");
+
+            // One-shot mode:  ConsoleStockPilot.exe -list   |   -get 3   |   -search btc   |   -track 3 24h
+            if (args.Length > 0)
             {
-                Console.WriteLine("Welcome to StockPilot");
-                Console.WriteLine("Use -? to see optional arguments");
-
-                string command;
-
-                do
-                {
-                    Console.WriteLine();
-
-                    command = Console.ReadLine() ?? "";
-
-                    string[] arguments = command.Split(
-                        ' ',
-                        StringSplitOptions.RemoveEmptyEntries
-                    );
-
-                    Console.WriteLine();
-
-                    if (arguments.Length == 0)
-                        continue;
-
-                    switch (arguments[0].ToLower())
-                    {
-                        case "-list":
-                            Console.WriteLine(await _view.List());
-                            break;
-
-                        case "-get":
-                            Console.WriteLine(await _view.Get());
-                            break;
-
-                        case "-search":
-                            Console.WriteLine(await _view.Search());
-                            break;
-
-                        case "-registrate":
-                            Console.WriteLine(await _view.SingIn());
-                            break;
-
-                        case "-login":
-                            Console.WriteLine(await _view.LogIn());
-                            break;
-
-                        case "-mywallet":
-                            Console.WriteLine(await _view.GetWallet());
-                            break;
-
-                        case "-buy":
-                            await _view.BuyCoin();
-                            break;
-
-                        case "":
-                            break;
-
-                        case "-?":
-                        case "?":
-                            Console.WriteLine(_view.ShowMenu());
-                            break;
-
-                        case "-clear":
-                            Console.Clear();
-                            break;
-
-                        case "-user":
-                            Console.WriteLine(_view.UserInfo());
-                            break;
-
-                        case "-exit":
-                            Console.WriteLine("Goodbye!");
-                            break;
-
-                        default:
-                            Console.WriteLine("Unknown argument");
-                            Console.WriteLine("Use -? to see optional arguments");
-                            break;
-                    }
-
-                }
-                while (!command.Trim().Equals(
-                    "-exit",
-                    StringComparison.OrdinalIgnoreCase
-                ));
+                await view.ExecuteAsync(args);
+                return 0;
             }
-            else
+
+            // Interactive mode
+            view.Welcome();
+
+            while (true)
             {
-                
+                string? line = view.ReadCommand();
+                if (line == null) break;                       // Ctrl+Z / Ctrl+D
+
+                string[] parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                if (parts.Length == 0) continue;
+
+                if (!await view.ExecuteAsync(parts)) break;    // -exit
             }
+
+            ConsoleUi.Goodbye();
+            return 0;
         }
     }
 }

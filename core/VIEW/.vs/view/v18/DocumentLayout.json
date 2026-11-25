@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "E:\\pojekts\\sep\\core\\VIEW\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\view.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:view.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\viewattributs\\coinchartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:viewattributs\\coinchartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\winformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:winformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\viewattributs\\pricechart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:viewattributs\\pricechart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|e:\\pojekts\\sep\\core\\view\\httpsepclient\\sepclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D4D98F-64FD-4D09-A154-EA18D602D801}|view.csproj|solutionrelative:httpsepclient\\sepclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +39,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PriceChart.cs",
-              "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\ViewAttributs\\PriceChart.cs",
-              "RelativeDocumentMoniker": "ViewAttributs\\PriceChart.cs",
-              "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\ViewAttributs\\PriceChart.cs",
-              "RelativeToolTip": "ViewAttributs\\PriceChart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T23:22:51.404Z"
+              "Title": "view.csproj",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\view.csproj",
+              "RelativeDocumentMoniker": "view.csproj",
+              "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\view.csproj",
+              "RelativeToolTip": "view.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-25T18:12:11.971Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ConsoleUi.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\ConsoleUi.cs",
+              "RelativeDocumentMoniker": "ConsoleUi.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\ConsoleUi.cs",
+              "RelativeToolTip": "ConsoleUi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-25T14:20:25.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ConsoleView.cs",
               "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\ConsoleView.cs",
               "RelativeDocumentMoniker": "ConsoleView.cs",
               "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\ConsoleView.cs",
               "RelativeToolTip": "ConsoleView.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAA9wAsBAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADcDAAAAAAAAAAAcwFsDAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T23:22:51.436Z",
+              "WhenOpened": "2026-11-24T19:28:47.017Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WinFormView.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\WinFormView.cs",
+              "RelativeDocumentMoniker": "WinFormView.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\WinFormView.cs",
+              "RelativeToolTip": "WinFormView.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAWwNUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:51:43.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoinChartForm.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\ViewAttributs\\CoinChartForm.cs",
+              "RelativeDocumentMoniker": "ViewAttributs\\CoinChartForm.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\ViewAttributs\\CoinChartForm.cs",
+              "RelativeToolTip": "ViewAttributs\\CoinChartForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:45:39.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SepClient.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\core\\VIEW\\HttpSepClient\\SepClient.cs",
+              "RelativeDocumentMoniker": "HttpSepClient\\SepClient.cs",
+              "ToolTip": "E:\\pojekts\\sep\\core\\VIEW\\HttpSepClient\\SepClient.cs",
+              "RelativeToolTip": "HttpSepClient\\SepClient.cs",
+              "ViewState": "AgIAANgBAAAAAAAAAAAUwPIBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:37:44.392Z"
             }
           ]
         }

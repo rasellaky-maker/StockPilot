@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B23B101-A12D-6823-8582-072743C1CAA9}|StockPilotWinFormsApp\\StockPilotWinFormsApp.csproj|E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\stockpilotwinformsapp\\forms\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1B23B101-A12D-6823-8582-072743C1CAA9}|StockPilotWinFormsApp\\StockPilotWinFormsApp.csproj|solutionrelative:stockpilotwinformsapp\\forms\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B23B101-A12D-6823-8582-072743C1CAA9}|StockPilotWinFormsApp\\StockPilotWinFormsApp.csproj|e:\\pojekts\\sep\\gui\\stockpilotwinformsapp\\stockpilotwinformsapp\\forms\\mainpanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B23B101-A12D-6823-8582-072743C1CAA9}|StockPilotWinFormsApp\\StockPilotWinFormsApp.csproj|solutionrelative:stockpilotwinformsapp\\forms\\mainpanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B23B101-A12D-6823-8582-072743C1CAA9}|StockPilotWinFormsApp\\StockPilotWinFormsApp.csproj|e:\\pojekts\\sep\\gui\\stockpilotwinformsapp\\stockpilotwinformsapp\\forms\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B23B101-A12D-6823-8582-072743C1CAA9}|StockPilotWinFormsApp\\StockPilotWinFormsApp.csproj|solutionrelative:stockpilotwinformsapp\\forms\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPanel.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\StockPilotWinFormsApp\\Forms\\MainPanel.cs",
+              "RelativeDocumentMoniker": "StockPilotWinFormsApp\\Forms\\MainPanel.cs",
+              "ToolTip": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\StockPilotWinFormsApp\\Forms\\MainPanel.cs",
+              "RelativeToolTip": "StockPilotWinFormsApp\\Forms\\MainPanel.cs",
+              "ViewState": "AgIAADMBAAAAAAAAAAAUwFgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T13:09:26.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPanel.Designer.cs",
+              "DocumentMoniker": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\StockPilotWinFormsApp\\Forms\\MainPanel.Designer.cs",
+              "RelativeDocumentMoniker": "StockPilotWinFormsApp\\Forms\\MainPanel.Designer.cs",
+              "ToolTip": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\StockPilotWinFormsApp\\Forms\\MainPanel.Designer.cs",
+              "RelativeToolTip": "StockPilotWinFormsApp\\Forms\\MainPanel.Designer.cs",
+              "ViewState": "AgIAACsCAAAAAAAAAAAAADwCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T18:51:17.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPanel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\StockPilotWinFormsApp\\Forms\\MainPanel.cs",
+              "RelativeDocumentMoniker": "StockPilotWinFormsApp\\Forms\\MainPanel.cs",
+              "ToolTip": "E:\\pojekts\\sep\\gui\\StockPilotWinFormsApp\\StockPilotWinFormsApp\\Forms\\MainPanel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "StockPilotWinFormsApp\\Forms\\MainPanel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-24T15:33:41.893Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

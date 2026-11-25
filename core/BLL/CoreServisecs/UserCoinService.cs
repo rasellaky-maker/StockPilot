@@ -64,6 +64,15 @@ namespace BLL.CoreServisecs
             return await _usersCoinsRepository.SellAsync(userId, coinId, quantity);
         }
 
+        public async Task<List<Coin>> ShowCreatedCoins(int userId)
+        {
+            if (userId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(userId));
+
+            var list = await _usersCoinsRepository.SelectCreatedByUserIdAsync(userId);
+            return list;
+        }
+
         public async Task<List<UsersCoins>> ShowCoins(int userId)
         {
             var list = await _usersCoinsRepository.SelectByUserIdAsync(userId);

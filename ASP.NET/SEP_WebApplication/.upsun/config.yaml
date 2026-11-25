@@ -1,0 +1,16 @@
+applications:
+  api:
+    source:
+      root: /
+    type: "dotnet:8.0"
+    web:
+      commands:
+        start: "dotnet SEP_WebApplication.dll"
+      locations:
+        "/":
+          passthru: true
+
+routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "api:http"

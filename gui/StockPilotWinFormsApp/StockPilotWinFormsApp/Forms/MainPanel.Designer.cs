@@ -1,0 +1,574 @@
+﻿namespace StockPilotWinFormsApp.Forms
+{
+    partial class MainPanel
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
+            panelSidebar = new Panel();
+            pictureBoxMarket = new PictureBox();
+            pictureBoxPortfolio = new PictureBox();
+            panelSidebarLine = new Panel();
+            buttonLogout = new Button();
+            buttonMarket = new Button();
+            buttonPortfolio = new Button();
+            labelMenu = new Label();
+            labelBrand = new Label();
+            pictureLogo = new PictureBox();
+            panelMain = new Panel();
+            tabController = new TabControl();
+            tabPortfolio = new TabPage();
+            labelFehler = new Label();
+            flowPortfolio = new FlowLayoutPanel();
+            labelPortfolioEmpty = new Label();
+            tabMarket = new TabPage();
+            dataGridMarket = new DataGridView();
+            panelMarketTop = new Panel();
+            buttonRefresh = new Button();
+            panelSearchBorder = new Panel();
+            panelSearchInner = new Panel();
+            textBoxSearch = new TextBox();
+            panelTopBar = new Panel();
+            panelUser = new Panel();
+            labelUserAvatar = new Label();
+            labelUserHint = new Label();
+            labelUserName = new Label();
+            labelPageTitle = new Label();
+            panelTopLine = new Panel();
+            pictureBoxLogout = new PictureBox();
+            panelSidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMarket).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPortfolio).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureLogo).BeginInit();
+            panelMain.SuspendLayout();
+            tabController.SuspendLayout();
+            tabPortfolio.SuspendLayout();
+            flowPortfolio.SuspendLayout();
+            tabMarket.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridMarket).BeginInit();
+            panelMarketTop.SuspendLayout();
+            panelSearchBorder.SuspendLayout();
+            panelSearchInner.SuspendLayout();
+            panelTopBar.SuspendLayout();
+            panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogout).BeginInit();
+            SuspendLayout();
+            // 
+            // panelSidebar
+            // 
+            panelSidebar.BackColor = Color.FromArgb(14, 19, 27);
+            panelSidebar.Controls.Add(pictureBoxLogout);
+            panelSidebar.Controls.Add(pictureBoxMarket);
+            panelSidebar.Controls.Add(pictureBoxPortfolio);
+            panelSidebar.Controls.Add(panelSidebarLine);
+            panelSidebar.Controls.Add(buttonLogout);
+            panelSidebar.Controls.Add(buttonMarket);
+            panelSidebar.Controls.Add(buttonPortfolio);
+            panelSidebar.Controls.Add(labelMenu);
+            panelSidebar.Controls.Add(labelBrand);
+            panelSidebar.Controls.Add(pictureLogo);
+            panelSidebar.Dock = DockStyle.Left;
+            panelSidebar.Location = new Point(0, 0);
+            panelSidebar.Name = "panelSidebar";
+            panelSidebar.Size = new Size(240, 760);
+            panelSidebar.TabIndex = 1;
+            // 
+            // pictureBoxMarket
+            // 
+            pictureBoxMarket.BackColor = Color.White;
+            pictureBoxMarket.Image = Properties.Resources.coin;
+            pictureBoxMarket.Location = new Point(16, 172);
+            pictureBoxMarket.Name = "pictureBoxMarket";
+            pictureBoxMarket.Padding = new Padding(5);
+            pictureBoxMarket.Size = new Size(44, 46);
+            pictureBoxMarket.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMarket.TabIndex = 8;
+            pictureBoxMarket.TabStop = false;
+            // 
+            // pictureBoxPortfolio
+            // 
+            pictureBoxPortfolio.BackColor = Color.White;
+            pictureBoxPortfolio.Image = Properties.Resources.portfolio;
+            pictureBoxPortfolio.Location = new Point(16, 120);
+            pictureBoxPortfolio.Name = "pictureBoxPortfolio";
+            pictureBoxPortfolio.Padding = new Padding(5);
+            pictureBoxPortfolio.Size = new Size(44, 46);
+            pictureBoxPortfolio.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxPortfolio.TabIndex = 7;
+            pictureBoxPortfolio.TabStop = false;
+            // 
+            // panelSidebarLine
+            // 
+            panelSidebarLine.BackColor = Color.FromArgb(32, 41, 54);
+            panelSidebarLine.Dock = DockStyle.Right;
+            panelSidebarLine.Location = new Point(239, 0);
+            panelSidebarLine.Name = "panelSidebarLine";
+            panelSidebarLine.Size = new Size(1, 760);
+            panelSidebarLine.TabIndex = 6;
+            // 
+            // buttonLogout
+            // 
+            buttonLogout.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonLogout.BackColor = Color.FromArgb(14, 19, 27);
+            buttonLogout.Cursor = Cursors.Hand;
+            buttonLogout.FlatAppearance.BorderSize = 0;
+            buttonLogout.FlatAppearance.MouseDownBackColor = Color.FromArgb(42, 23, 20);
+            buttonLogout.FlatAppearance.MouseOverBackColor = Color.FromArgb(42, 23, 20);
+            buttonLogout.FlatStyle = FlatStyle.Flat;
+            buttonLogout.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            buttonLogout.ForeColor = Color.FromArgb(240, 138, 126);
+            buttonLogout.Location = new Point(16, 698);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Padding = new Padding(45, 0, 0, 0);
+            buttonLogout.Size = new Size(208, 46);
+            buttonLogout.TabIndex = 5;
+            buttonLogout.Text = "Logout";
+            buttonLogout.TextAlign = ContentAlignment.MiddleLeft;
+            buttonLogout.UseVisualStyleBackColor = false;
+            buttonLogout.Click += buttonLogout_Click;
+            // 
+            // buttonMarket
+            // 
+            buttonMarket.BackColor = Color.FromArgb(14, 19, 27);
+            buttonMarket.Cursor = Cursors.Hand;
+            buttonMarket.FlatAppearance.BorderSize = 0;
+            buttonMarket.FlatAppearance.MouseDownBackColor = Color.FromArgb(23, 41, 26);
+            buttonMarket.FlatAppearance.MouseOverBackColor = Color.FromArgb(20, 29, 35);
+            buttonMarket.FlatStyle = FlatStyle.Flat;
+            buttonMarket.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            buttonMarket.ForeColor = Color.FromArgb(140, 152, 169);
+            buttonMarket.Location = new Point(16, 172);
+            buttonMarket.Name = "buttonMarket";
+            buttonMarket.Padding = new Padding(45, 0, 0, 0);
+            buttonMarket.Size = new Size(208, 46);
+            buttonMarket.TabIndex = 4;
+            buttonMarket.Text = "Market";
+            buttonMarket.TextAlign = ContentAlignment.MiddleLeft;
+            buttonMarket.UseVisualStyleBackColor = false;
+            // 
+            // buttonPortfolio
+            // 
+            buttonPortfolio.BackColor = Color.FromArgb(23, 41, 26);
+            buttonPortfolio.Cursor = Cursors.Hand;
+            buttonPortfolio.FlatAppearance.BorderSize = 0;
+            buttonPortfolio.FlatAppearance.MouseDownBackColor = Color.FromArgb(23, 41, 26);
+            buttonPortfolio.FlatAppearance.MouseOverBackColor = Color.FromArgb(23, 41, 26);
+            buttonPortfolio.FlatStyle = FlatStyle.Flat;
+            buttonPortfolio.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            buttonPortfolio.ForeColor = Color.FromArgb(182, 250, 100);
+            buttonPortfolio.Location = new Point(16, 120);
+            buttonPortfolio.Name = "buttonPortfolio";
+            buttonPortfolio.Padding = new Padding(45, 0, 0, 0);
+            buttonPortfolio.Size = new Size(208, 46);
+            buttonPortfolio.TabIndex = 3;
+            buttonPortfolio.Text = "Portfolio";
+            buttonPortfolio.TextAlign = ContentAlignment.MiddleLeft;
+            buttonPortfolio.UseVisualStyleBackColor = false;
+            buttonPortfolio.MouseEnter += buttonPortfolio_MouseEnter;
+            // 
+            // labelMenu
+            // 
+            labelMenu.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            labelMenu.ForeColor = Color.FromArgb(140, 152, 169);
+            labelMenu.Location = new Point(24, 92);
+            labelMenu.Name = "labelMenu";
+            labelMenu.Size = new Size(192, 20);
+            labelMenu.TabIndex = 2;
+            labelMenu.Text = "MENU";
+            labelMenu.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelBrand
+            // 
+            labelBrand.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            labelBrand.ForeColor = Color.FromArgb(182, 250, 100);
+            labelBrand.Location = new Point(68, 22);
+            labelBrand.Name = "labelBrand";
+            labelBrand.Size = new Size(160, 36);
+            labelBrand.TabIndex = 1;
+            labelBrand.Text = "StockPilot";
+            labelBrand.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // pictureLogo
+            // 
+            pictureLogo.BackColor = Color.Transparent;
+            pictureLogo.Image = Properties.Resources.stockpilot_icon;
+            pictureLogo.Location = new Point(24, 22);
+            pictureLogo.Name = "pictureLogo";
+            pictureLogo.Size = new Size(36, 36);
+            pictureLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureLogo.TabIndex = 0;
+            pictureLogo.TabStop = false;
+            // 
+            // panelMain
+            // 
+            panelMain.BackColor = Color.FromArgb(8, 11, 16);
+            panelMain.Controls.Add(tabController);
+            panelMain.Controls.Add(panelTopBar);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(240, 0);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1040, 760);
+            panelMain.TabIndex = 0;
+            // 
+            // tabController
+            // 
+            tabController.Appearance = TabAppearance.FlatButtons;
+            tabController.Controls.Add(tabPortfolio);
+            tabController.Controls.Add(tabMarket);
+            tabController.Dock = DockStyle.Fill;
+            tabController.ItemSize = new Size(0, 1);
+            tabController.Location = new Point(0, 72);
+            tabController.Name = "tabController";
+            tabController.Padding = new Point(0, 0);
+            tabController.SelectedIndex = 0;
+            tabController.Size = new Size(1040, 688);
+            tabController.SizeMode = TabSizeMode.Fixed;
+            tabController.TabIndex = 1;
+            tabController.TabStop = false;
+            // 
+            // tabPortfolio
+            // 
+            tabPortfolio.BackColor = Color.FromArgb(8, 11, 16);
+            tabPortfolio.Controls.Add(labelFehler);
+            tabPortfolio.Controls.Add(flowPortfolio);
+            tabPortfolio.Location = new Point(4, 5);
+            tabPortfolio.Name = "tabPortfolio";
+            tabPortfolio.Padding = new Padding(24);
+            tabPortfolio.Size = new Size(1032, 679);
+            tabPortfolio.TabIndex = 0;
+            tabPortfolio.Text = "Portfolio";
+            // 
+            // labelFehler
+            // 
+            labelFehler.AutoSize = true;
+            labelFehler.ForeColor = Color.FromArgb(240, 138, 126);
+            labelFehler.Location = new Point(24, 658);
+            labelFehler.Name = "labelFehler";
+            labelFehler.Size = new Size(45, 19);
+            labelFehler.TabIndex = 1;
+            labelFehler.Text = "label1";
+            // 
+            // flowPortfolio
+            // 
+            flowPortfolio.AutoScroll = true;
+            flowPortfolio.BackColor = Color.FromArgb(8, 11, 16);
+            flowPortfolio.Controls.Add(labelPortfolioEmpty);
+            flowPortfolio.Dock = DockStyle.Fill;
+            flowPortfolio.Location = new Point(24, 24);
+            flowPortfolio.Name = "flowPortfolio";
+            flowPortfolio.Size = new Size(984, 631);
+            flowPortfolio.TabIndex = 0;
+            // 
+            // labelPortfolioEmpty
+            // 
+            labelPortfolioEmpty.Font = new Font("Segoe UI", 11F);
+            labelPortfolioEmpty.ForeColor = Color.FromArgb(140, 152, 169);
+            labelPortfolioEmpty.Location = new Point(3, 0);
+            labelPortfolioEmpty.Name = "labelPortfolioEmpty";
+            labelPortfolioEmpty.Size = new Size(700, 40);
+            labelPortfolioEmpty.TabIndex = 0;
+            labelPortfolioEmpty.Text = "You don't own any coins yet. Open the market to buy your first one.";
+            labelPortfolioEmpty.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // tabMarket
+            // 
+            tabMarket.BackColor = Color.FromArgb(8, 11, 16);
+            tabMarket.Controls.Add(dataGridMarket);
+            tabMarket.Controls.Add(panelMarketTop);
+            tabMarket.Location = new Point(4, 5);
+            tabMarket.Name = "tabMarket";
+            tabMarket.Padding = new Padding(24);
+            tabMarket.Size = new Size(1032, 679);
+            tabMarket.TabIndex = 1;
+            tabMarket.Text = "Market";
+            // 
+            // dataGridMarket
+            // 
+            dataGridMarket.AllowUserToAddRows = false;
+            dataGridMarket.AllowUserToDeleteRows = false;
+            dataGridMarket.AllowUserToResizeRows = false;
+            dataGridMarket.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridMarket.BackgroundColor = Color.FromArgb(8, 11, 16);
+            dataGridMarket.BorderStyle = BorderStyle.None;
+            dataGridMarket.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridMarket.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(14, 19, 27);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(140, 152, 169);
+            dataGridViewCellStyle1.Padding = new Padding(10, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(14, 19, 27);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(140, 152, 169);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridMarket.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridMarket.ColumnHeadersHeight = 40;
+            dataGridMarket.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(17, 23, 32);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(241, 245, 249);
+            dataGridViewCellStyle2.Padding = new Padding(10, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(23, 41, 26);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(182, 250, 100);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridMarket.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridMarket.Dock = DockStyle.Fill;
+            dataGridMarket.EnableHeadersVisualStyles = false;
+            dataGridMarket.GridColor = Color.FromArgb(32, 41, 54);
+            dataGridMarket.Location = new Point(24, 86);
+            dataGridMarket.MultiSelect = false;
+            dataGridMarket.Name = "dataGridMarket";
+            dataGridMarket.ReadOnly = true;
+            dataGridMarket.RowHeadersVisible = false;
+            dataGridMarket.RowTemplate.Height = 46;
+            dataGridMarket.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridMarket.Size = new Size(984, 569);
+            dataGridMarket.TabIndex = 1;
+            // 
+            // panelMarketTop
+            // 
+            panelMarketTop.BackColor = Color.FromArgb(8, 11, 16);
+            panelMarketTop.Controls.Add(buttonRefresh);
+            panelMarketTop.Controls.Add(panelSearchBorder);
+            panelMarketTop.Dock = DockStyle.Top;
+            panelMarketTop.Location = new Point(24, 24);
+            panelMarketTop.Name = "panelMarketTop";
+            panelMarketTop.Size = new Size(984, 62);
+            panelMarketTop.TabIndex = 0;
+            // 
+            // buttonRefresh
+            // 
+            buttonRefresh.BackColor = Color.FromArgb(12, 17, 24);
+            buttonRefresh.Cursor = Cursors.Hand;
+            buttonRefresh.FlatAppearance.BorderColor = Color.FromArgb(32, 41, 54);
+            buttonRefresh.FlatAppearance.MouseDownBackColor = Color.FromArgb(14, 19, 27);
+            buttonRefresh.FlatAppearance.MouseOverBackColor = Color.FromArgb(20, 29, 35);
+            buttonRefresh.FlatStyle = FlatStyle.Flat;
+            buttonRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            buttonRefresh.ForeColor = Color.FromArgb(241, 245, 249);
+            buttonRefresh.Location = new Point(336, 0);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new Size(112, 46);
+            buttonRefresh.TabIndex = 1;
+            buttonRefresh.Text = "Refresh";
+            buttonRefresh.UseVisualStyleBackColor = false;
+            // 
+            // panelSearchBorder
+            // 
+            panelSearchBorder.BackColor = Color.FromArgb(32, 41, 54);
+            panelSearchBorder.Controls.Add(panelSearchInner);
+            panelSearchBorder.Location = new Point(0, 0);
+            panelSearchBorder.Name = "panelSearchBorder";
+            panelSearchBorder.Padding = new Padding(1);
+            panelSearchBorder.Size = new Size(320, 46);
+            panelSearchBorder.TabIndex = 0;
+            // 
+            // panelSearchInner
+            // 
+            panelSearchInner.BackColor = Color.FromArgb(12, 17, 24);
+            panelSearchInner.Controls.Add(textBoxSearch);
+            panelSearchInner.Dock = DockStyle.Fill;
+            panelSearchInner.Location = new Point(1, 1);
+            panelSearchInner.Name = "panelSearchInner";
+            panelSearchInner.Size = new Size(318, 44);
+            panelSearchInner.TabIndex = 0;
+            // 
+            // textBoxSearch
+            // 
+            textBoxSearch.BackColor = Color.FromArgb(12, 17, 24);
+            textBoxSearch.BorderStyle = BorderStyle.None;
+            textBoxSearch.Font = new Font("Segoe UI", 11F);
+            textBoxSearch.ForeColor = Color.FromArgb(241, 245, 249);
+            textBoxSearch.Location = new Point(14, 11);
+            textBoxSearch.Name = "textBoxSearch";
+            textBoxSearch.PlaceholderText = "Search coin...";
+            textBoxSearch.Size = new Size(290, 20);
+            textBoxSearch.TabIndex = 0;
+            // 
+            // panelTopBar
+            // 
+            panelTopBar.BackColor = Color.FromArgb(8, 11, 16);
+            panelTopBar.Controls.Add(panelUser);
+            panelTopBar.Controls.Add(labelPageTitle);
+            panelTopBar.Controls.Add(panelTopLine);
+            panelTopBar.Dock = DockStyle.Top;
+            panelTopBar.Location = new Point(0, 0);
+            panelTopBar.Name = "panelTopBar";
+            panelTopBar.Size = new Size(1040, 72);
+            panelTopBar.TabIndex = 0;
+            // 
+            // panelUser
+            // 
+            panelUser.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panelUser.BackColor = Color.FromArgb(8, 11, 16);
+            panelUser.Controls.Add(labelUserAvatar);
+            panelUser.Controls.Add(labelUserHint);
+            panelUser.Controls.Add(labelUserName);
+            panelUser.Location = new Point(756, 8);
+            panelUser.Name = "panelUser";
+            panelUser.Size = new Size(260, 56);
+            panelUser.TabIndex = 1;
+            // 
+            // labelUserAvatar
+            // 
+            labelUserAvatar.BackColor = Color.FromArgb(23, 41, 26);
+            labelUserAvatar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            labelUserAvatar.ForeColor = Color.FromArgb(182, 250, 100);
+            labelUserAvatar.Location = new Point(220, 8);
+            labelUserAvatar.Name = "labelUserAvatar";
+            labelUserAvatar.Size = new Size(40, 40);
+            labelUserAvatar.TabIndex = 2;
+            labelUserAvatar.Text = "U";
+            labelUserAvatar.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelUserHint
+            // 
+            labelUserHint.Font = new Font("Segoe UI", 8.5F);
+            labelUserHint.ForeColor = Color.FromArgb(140, 152, 169);
+            labelUserHint.Location = new Point(0, 30);
+            labelUserHint.Name = "labelUserHint";
+            labelUserHint.Size = new Size(208, 18);
+            labelUserHint.TabIndex = 1;
+            labelUserHint.Text = "Signed in";
+            labelUserHint.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // labelUserName
+            // 
+            labelUserName.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            labelUserName.ForeColor = Color.FromArgb(241, 245, 249);
+            labelUserName.Location = new Point(0, 8);
+            labelUserName.Name = "labelUserName";
+            labelUserName.Size = new Size(208, 22);
+            labelUserName.TabIndex = 0;
+            labelUserName.Text = "username";
+            labelUserName.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // labelPageTitle
+            // 
+            labelPageTitle.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
+            labelPageTitle.ForeColor = Color.FromArgb(241, 245, 249);
+            labelPageTitle.Location = new Point(28, 16);
+            labelPageTitle.Name = "labelPageTitle";
+            labelPageTitle.Size = new Size(400, 40);
+            labelPageTitle.TabIndex = 0;
+            labelPageTitle.Text = "Portfolio";
+            labelPageTitle.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panelTopLine
+            // 
+            panelTopLine.BackColor = Color.FromArgb(32, 41, 54);
+            panelTopLine.Dock = DockStyle.Bottom;
+            panelTopLine.Location = new Point(0, 71);
+            panelTopLine.Name = "panelTopLine";
+            panelTopLine.Size = new Size(1040, 1);
+            panelTopLine.TabIndex = 2;
+            // 
+            // pictureBoxLogout
+            // 
+            pictureBoxLogout.BackColor = Color.White;
+            pictureBoxLogout.Image = (Image)resources.GetObject("pictureBoxLogout.Image");
+            pictureBoxLogout.Location = new Point(16, 698);
+            pictureBoxLogout.Name = "pictureBoxLogout";
+            pictureBoxLogout.Padding = new Padding(5);
+            pictureBoxLogout.Size = new Size(44, 46);
+            pictureBoxLogout.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLogout.TabIndex = 9;
+            pictureBoxLogout.TabStop = false;
+            // 
+            // MainPanel
+            // 
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.FromArgb(8, 11, 16);
+            ClientSize = new Size(1280, 760);
+            Controls.Add(panelMain);
+            Controls.Add(panelSidebar);
+            Font = new Font("Segoe UI", 10F);
+            MinimumSize = new Size(1000, 640);
+            Name = "MainPanel";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "StockPilot";
+            FormClosing += MainPanel_FormClosing;
+            panelSidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMarket).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPortfolio).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureLogo).EndInit();
+            panelMain.ResumeLayout(false);
+            tabController.ResumeLayout(false);
+            tabPortfolio.ResumeLayout(false);
+            tabPortfolio.PerformLayout();
+            flowPortfolio.ResumeLayout(false);
+            tabMarket.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridMarket).EndInit();
+            panelMarketTop.ResumeLayout(false);
+            panelSearchBorder.ResumeLayout(false);
+            panelSearchInner.ResumeLayout(false);
+            panelSearchInner.PerformLayout();
+            panelTopBar.ResumeLayout(false);
+            panelUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogout).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel panelSidebar;
+        private Panel panelSidebarLine;
+        private Button buttonLogout;
+        private Button buttonMarket;
+        private Button buttonPortfolio;
+        private Label labelMenu;
+        private Label labelBrand;
+        private PictureBox pictureLogo;
+        private Panel panelMain;
+        private TabControl tabController;
+        private TabPage tabPortfolio;
+        private FlowLayoutPanel flowPortfolio;
+        private Label labelPortfolioEmpty;
+        private TabPage tabMarket;
+        private DataGridView dataGridMarket;
+        private Panel panelMarketTop;
+        private Button buttonRefresh;
+        private Panel panelSearchBorder;
+        private Panel panelSearchInner;
+        private TextBox textBoxSearch;
+        private Panel panelTopBar;
+        private Panel panelUser;
+        private Label labelUserAvatar;
+        private Label labelUserHint;
+        private Label labelUserName;
+        private Label labelPageTitle;
+        private Panel panelTopLine;
+        private Label labelFehler;
+        private PictureBox pictureBoxPortfolio;
+        private PictureBox pictureBoxMarket;
+        private PictureBox pictureBoxLogout;
+    }
+
+}

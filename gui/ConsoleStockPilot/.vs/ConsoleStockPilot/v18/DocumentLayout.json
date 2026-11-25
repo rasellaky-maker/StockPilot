@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|e:\\pojekts\\sep\\gui\\consolestockpilot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|e:\\pojekts\\sep\\gui\\consolestockpilot\\compose.yaml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|solutionrelative:compose.yaml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|e:\\pojekts\\sep\\gui\\consolestockpilot\\dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{83124722-048F-448E-A222-A6D8C8408A3F}|ConsoleStockPilot.csproj|solutionrelative:dockerfile||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "compose.yaml",
+              "DocumentMoniker": "E:\\pojekts\\sep\\gui\\ConsoleStockPilot\\compose.yaml",
+              "RelativeDocumentMoniker": "compose.yaml",
+              "ToolTip": "E:\\pojekts\\sep\\gui\\ConsoleStockPilot\\compose.yaml",
+              "RelativeToolTip": "compose.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-11-25T18:00:31.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\pojekts\\sep\\gui\\ConsoleStockPilot\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "E:\\pojekts\\sep\\gui\\ConsoleStockPilot\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-11-25T17:59:47.66Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +56,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\pojekts\\sep\\gui\\ConsoleStockPilot\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAC4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T23:22:17.347Z",
               "EditorCaption": ""

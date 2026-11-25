@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\",
+  "WorkspaceRootPath": "E:\\pojekts\\SEP_WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|e:\\pojekts\\sep\\asp.net\\sep_webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|e:\\pojekts\\sep_webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|e:\\pojekts\\sep\\asp.net\\sep_webapplication\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|e:\\pojekts\\sep_webapplication\\controllers\\coincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:controllers\\coincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|e:\\pojekts\\sep_webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B19BE68-873E-4C49-A3F2-6875A782958A}|SEP_WebApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T23:15:49.525Z"
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\pojekts\\SEP_WebApplication\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\pojekts\\SEP_WebApplication\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-24T15:58:27.718Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\pojekts\\sep\\ASP.NET\\SEP_WebApplication\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBcAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CoinController.cs",
+              "DocumentMoniker": "E:\\pojekts\\SEP_WebApplication\\Controllers\\CoinController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoinController.cs",
+              "ToolTip": "E:\\pojekts\\SEP_WebApplication\\Controllers\\CoinController.cs",
+              "RelativeToolTip": "Controllers\\CoinController.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAmwFEBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T23:12:22.073Z",
+              "WhenOpened": "2026-11-23T21:06:02.857Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\pojekts\\SEP_WebApplication\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\pojekts\\SEP_WebApplication\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAcwMgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T21:48:39.776Z"
             }
           ]
         }
